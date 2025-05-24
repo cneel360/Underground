@@ -1,22 +1,43 @@
 using UnityEngine;
 using Cinemachine;
-using NUnit.Framework;
+using StarterAssets;
 
-public class playershootingsystem : MonoBehaviour
+public class PlayerShootingSystem : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera aimcam;
+    [SerializeField] private StarterAssetsInputs inputmanager;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        if (inputmanager == null)
+        {
+            inputmanager = GetComponent<StarterAssetsInputs>();
+        }
+
+        if (aimcam == null)
+        {
+            Debug.LogWarning("Aim camera not assigned in PlayerShootingSystem.");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (inputmanager != null)
+        {
+            Debug.Log("Aim input state: " + inputmanager.aim);
+
+            if (inputmanager.aim)
+            {
+                aimcam.gameObject.SetActive(true);
+            }
+            else
+            {
+                aimcam.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            Debug.LogError("InputManager is missing on PlayerShootingSystem.");
+        }
     }
 }
- 
