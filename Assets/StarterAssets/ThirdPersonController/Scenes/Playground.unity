@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31
+      value: 0.2635
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -244,9 +244,17 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 700051398}
+    - target: {fileID: 2070925441746177913, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
+      propertyPath: m_Lens.Dutch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2070925441746177913, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 28.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
       propertyPath: CameraSide
-      value: 1
+      value: 0.925
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a0f9978b7fc85db45bd724408d7dead4, type: 3}
       propertyPath: ShoulderOffset.x
@@ -684,6 +692,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: field of view
+      value: 28.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: far clip plane
       value: 500
       objectReference: {fileID: 0}
@@ -701,7 +713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31
+      value: 0.2635
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
