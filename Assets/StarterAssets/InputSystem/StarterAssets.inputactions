@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "aim",
+                    "name": "Aim",
                     "type": "Button",
                     "id": "24824915-9117-4be9-8d52-9c315ae12ef3",
                     "expectedControlType": "",
@@ -234,8 +234,8 @@
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "aim",
+                    "groups": ";KeyboardMouse",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -245,8 +245,8 @@
                     "path": "<Keyboard>/rightCtrl",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "aim",
+                    "groups": ";KeyboardMouse",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
