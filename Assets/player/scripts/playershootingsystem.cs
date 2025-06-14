@@ -24,7 +24,7 @@ public class PlayerShootingSystem : MonoBehaviour
     {
         if (inputmanager != null)
         {
-            Debug.Log("Aim input state: " + inputmanager.aim);
+         //   Debug.Log("Aim input state: " + inputmanager.aim);
 
             if (inputmanager.aim)
             {

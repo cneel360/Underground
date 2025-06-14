@@ -58,12 +58,12 @@ namespace StarterAssets
         { if (value.isPressed)
             {
                 AimInput(true);
-                Debug.Log("Aim On");
+           //     Debug.Log("Aim On");
             }
             else if (value.isPressed == false)
             {
                 AimInput(false);
-                Debug.Log("Aim off");
+               // Debug.Log("Aim off");
             }
             // Debug.Log($"OnAim (Performed) called. InputValue.isPressed: {value.isPressed}");
            // Set aim to true when the action is performed
@@ -102,7 +102,7 @@ namespace StarterAssets
             
             aim = newAimState;
             
-            Debug.Log($"AimInput called. newAimState: {newAimState}, current 'aim' variable: {aim}");
+         //   Debug.Log($"AimInput called. newAimState: {newAimState}, current 'aim' variable: {aim}");
         }
 
         private void OnApplicationFocus(bool hasFocus)

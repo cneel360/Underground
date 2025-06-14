@@ -21,11 +21,11 @@ public class AimToggleInput : MonoBehaviour
         // You can add debug logs to see the state change in the console.
         if (aim)
         {
-            Debug.Log("Aim action is PRESSED!");
+          //  Debug.Log("Aim action is PRESSED!");
         }
         else
         {
-            Debug.Log("Aim action is RELEASED!");
+         //   Debug.Log("Aim action is RELEASED!");
         }
     }
     
