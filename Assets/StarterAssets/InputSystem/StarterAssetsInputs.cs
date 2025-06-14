@@ -1,3 +1,4 @@
+using System.Data.Common;
 using UnityEngine;
 
 #if ENABLE_INPUT_SYSTEM
@@ -13,7 +14,8 @@ namespace StarterAssets
         public Vector2 look;
         public bool jump;
         public bool sprint;
-        public bool aim; // This public variable will be updated
+        public bool aim;
+        public bool AimSwitch;  // This public variable will be updated
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -26,13 +28,13 @@ namespace StarterAssets
         // When using Send Messages, this is called when the action is 'performed' (typically on press)
         public void OnMove(InputValue value)
         {
-            Debug.Log("OnMove called.");
+     //       Debug.Log("OnMove called.");
             MoveInput(value.Get<Vector2>());
         }
 
         public void OnLook(InputValue value)
         {
-            Debug.Log("OnLook called.");
+          //  Debug.Log("OnLook called.");
             if (cursorInputForLook)
             {
                 LookInput(value.Get<Vector2>());
@@ -41,21 +43,30 @@ namespace StarterAssets
 
         public void OnJump(InputValue value)
         {
-            Debug.Log("OnJump called.");
+         //  Debug.Log("OnJump called.");
             JumpInput(value.isPressed);
         }
 
         public void OnSprint(InputValue value)
         {
-            Debug.Log("OnSprint called.");
+     //       Debug.Log("OnSprint called.");
             SprintInput(value.isPressed);
         }
 
         // This method will be called when the Aim action is 'performed' (e.g., button pressed down)
         public void OnAim(InputValue value)
-        {
+        { if (value.isPressed)
+            {
+                AimInput(true);
+                Debug.Log("Aim On");
+            }
+            else if (value.isPressed == false)
+            {
+                AimInput(false);
+                Debug.Log("Aim off");
+            }
             // Debug.Log($"OnAim (Performed) called. InputValue.isPressed: {value.isPressed}");
-            AimInput(true); // Set aim to true when the action is performed
+           // Set aim to true when the action is performed
         }
 
         // This new method will be called when the Aim action is 'canceled' (e.g., button released)
@@ -88,7 +99,9 @@ namespace StarterAssets
 
         public void AimInput(bool newAimState)
         {
+            
             aim = newAimState;
+            
             Debug.Log($"AimInput called. newAimState: {newAimState}, current 'aim' variable: {aim}");
         }
 

@@ -5,13 +5,13 @@ using StarterAssets;
 public class PlayerShootingSystem : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera aimcam;
-    [SerializeField] private  AimToggleInput inputmanager;
+    [SerializeField] private  StarterAssetsInputs inputmanager;
 
     void Awake()
     {
         if (inputmanager == null)
         {
-            inputmanager = GetComponent<AimToggleInput>();
+            inputmanager = GetComponent<StarterAssetsInputs>();
         }
 
         if (aimcam == null)
