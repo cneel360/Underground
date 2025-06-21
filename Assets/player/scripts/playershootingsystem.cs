@@ -35,24 +35,7 @@ public class PlayerShootingSystem : MonoBehaviour
     {
         if (inputmanager != null)
         {
-            //   Debug.Log("Aim input state: " + inputmanager.aim);
-
-            if (inputmanager.aim)
-            {
-                aimcam.gameObject.SetActive(true);
-                startercontroller.SetCameraSensitivity(aimSensitivity);
-            }
-            else
-            {
-                aimcam.gameObject.SetActive(false);
-                startercontroller.SetCameraSensitivity(normalSensitivity);
-            }
-        }
-        else
-        {
-            Debug.LogError("InputManager is missing on PlayerShootingSystem.");
-        }
-        Vector3 mouseWorldposition = Vector3.zero;
+             Vector3 mouseWorldposition = Vector3.zero;
         Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
         if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
@@ -60,7 +43,32 @@ public class PlayerShootingSystem : MonoBehaviour
             debugtransform.position = raycasthit.point;
             mouseWorldposition = raycasthit.point;
         }
-        Vector3 WorldAimTarget = mouseWorldposition;
+            //   Debug.Log("Aim input state: " + inputmanager.aim);
+
+            if (inputmanager.aim)
+
+            {
+                Vector3 WorldAimTarget = mouseWorldposition;
+                WorldAimTarget.y = transform.position.y;
+                Vector3 AimDirection = (WorldAimTarget - transform.position).normalized;
+                aimcam.gameObject.SetActive(true);
+                startercontroller.SetCameraSensitivity(aimSensitivity);
+                transform.forward = Vector3.Lerp(transform.forward, AimDirection, Time.deltaTime * 20f);
+                startercontroller.SetRotateonmove(false);
+            }
+            else
+            {
+                aimcam.gameObject.SetActive(false);
+                startercontroller.SetCameraSensitivity(normalSensitivity);
+                startercontroller.SetRotateonmove(true);
+            }
+        }
+        else
+        {
+            Debug.LogError("InputManager is missing on PlayerShootingSystem.");
+        }
+       
+        
 
     }
 }

@@ -110,6 +110,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
+        private bool _rotateonmove = true;
 
         private bool IsCurrentDeviceMouse
         {
@@ -260,9 +261,12 @@ namespace StarterAssets
                                   _mainCamera.transform.eulerAngles.y;
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                     RotationSmoothTime);
-
+                if (_rotateonmove)
+                {
+                    transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+                }
                 // rotate to face input direction relative to camera position
-                transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+
             }
 
 
@@ -392,6 +396,10 @@ namespace StarterAssets
         public void SetCameraSensitivity(float newsensitivity)
         {
             CamSensitivity = newsensitivity;
+        }
+        public void SetRotateonmove(bool nb)
+        {
+             _rotateonmove = nb;
         }
     }
 }
