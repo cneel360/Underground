@@ -2,6 +2,8 @@ using UnityEngine;
 using Cinemachine;
 using StarterAssets;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
+
 
 public class PlayerShootingSystem : MonoBehaviour
 {
@@ -10,7 +12,8 @@ public class PlayerShootingSystem : MonoBehaviour
     private ThirdPersonController startercontroller;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private float normalSensitivity;
-
+    [SerializeField] private LayerMask aimcolliderlayermask = new LayerMask();
+    [SerializeField] private Transform debugtransform;
     void Awake()
     {
         if (inputmanager == null)
@@ -49,5 +52,15 @@ public class PlayerShootingSystem : MonoBehaviour
         {
             Debug.LogError("InputManager is missing on PlayerShootingSystem.");
         }
+        Vector3 mouseWorldposition = Vector3.zero;
+        Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
+        if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
+        {
+            debugtransform.position = raycasthit.point;
+            mouseWorldposition = raycasthit.point;
+        }
+        Vector3 WorldAimTarget = mouseWorldposition;
+
     }
 }
