@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class bulletcontroller : MonoBehaviour
 {
-    float speed;
+    [SerializeField] float speed;
     private Rigidbody rb;
     private void Awake()
     {
@@ -11,7 +11,7 @@ public class bulletcontroller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        speed = 10f;
+       // speed = 10f;
         rb.linearVelocity = transform.forward * speed;
         
     }

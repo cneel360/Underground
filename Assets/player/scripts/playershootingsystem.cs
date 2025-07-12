@@ -14,9 +14,9 @@ public class PlayerShootingSystem : MonoBehaviour
     [SerializeField] private float normalSensitivity;
     [SerializeField] private LayerMask aimcolliderlayermask = new LayerMask();
     [SerializeField] private Transform debugtransform;
-    [SerializeField] private Transform bulletProjectile;
+    [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;
-
+                     private Vector3  mouseWorldposition;
     void Awake()
     {
         if (inputmanager == null)
@@ -38,7 +38,7 @@ public class PlayerShootingSystem : MonoBehaviour
     {
         if (inputmanager != null)
         {
-            Vector3 mouseWorldposition = Vector3.zero;
+             mouseWorldposition = Vector3.zero;
             Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
             Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
             if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
@@ -72,7 +72,9 @@ public class PlayerShootingSystem : MonoBehaviour
         }
         if (inputmanager.shoot)
         {
-            
+            Vector3 aimdir = (mouseWorldposition - spawnbulletpos.position).normalized;
+            Instantiate(bulletProjectile, spawnbulletpos.position, Quaternion.LookRotation(aimdir,Vector3.up));
+            inputmanager.shoot = false;
         }
        
         
