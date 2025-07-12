@@ -15,7 +15,8 @@ namespace StarterAssets
         public bool jump;
         public bool sprint;
         public bool aim;
-        public bool AimSwitch;  // This public variable will be updated
+        public bool AimSwitch;
+        public bool shoot;  // This public variable will be updated
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -46,10 +47,14 @@ namespace StarterAssets
          //  Debug.Log("OnJump called.");
             JumpInput(value.isPressed);
         }
+        public void OnShoot(InputValue value)
+        {
+            ShootInput(value.isPressed);
+        }
 
         public void OnSprint(InputValue value)
         {
-     //       Debug.Log("OnSprint called.");
+            //       Debug.Log("OnSprint called.");
             SprintInput(value.isPressed);
         }
 
@@ -90,6 +95,10 @@ namespace StarterAssets
         public void JumpInput(bool newJumpState)
         {
             jump = newJumpState;
+        }
+        public void ShootInput(bool newShootstate)
+        {
+            shoot = newShootstate;
         }
 
         public void SprintInput(bool newSprintState)

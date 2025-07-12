@@ -14,6 +14,9 @@ public class PlayerShootingSystem : MonoBehaviour
     [SerializeField] private float normalSensitivity;
     [SerializeField] private LayerMask aimcolliderlayermask = new LayerMask();
     [SerializeField] private Transform debugtransform;
+    [SerializeField] private Transform bulletProjectile;
+    [SerializeField] private Transform spawnbulletpos;
+
     void Awake()
     {
         if (inputmanager == null)
@@ -35,14 +38,14 @@ public class PlayerShootingSystem : MonoBehaviour
     {
         if (inputmanager != null)
         {
-             Vector3 mouseWorldposition = Vector3.zero;
-        Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
-        Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
-        if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
-        {
-            debugtransform.position = raycasthit.point;
-            mouseWorldposition = raycasthit.point;
-        }
+            Vector3 mouseWorldposition = Vector3.zero;
+            Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
+            if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
+            {
+                debugtransform.position = raycasthit.point;
+                mouseWorldposition = raycasthit.point;
+            }
             //   Debug.Log("Aim input state: " + inputmanager.aim);
 
             if (inputmanager.aim)
@@ -66,6 +69,10 @@ public class PlayerShootingSystem : MonoBehaviour
         else
         {
             Debug.LogError("InputManager is missing on PlayerShootingSystem.");
+        }
+        if (inputmanager.shoot)
+        {
+            
         }
        
         
