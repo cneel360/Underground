@@ -21,10 +21,10 @@ public class bulletcontroller : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        speed = 0f;
-        Debug.Log("Collided with: " + other);
+        // The 'collision' variable contains info about the hit, like the object hit
+        Debug.Log("Collided with: " + collision.gameObject.name);
         Destroy(gameObject);
     }
     // Update is called once per frame
