@@ -3,6 +3,8 @@ using Cinemachine;
 using StarterAssets;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
+using System;
 
 
 public class PlayerShootingSystem : MonoBehaviour
@@ -16,9 +18,15 @@ public class PlayerShootingSystem : MonoBehaviour
     [SerializeField] private Transform debugtransform;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;
-                     private Vector3  mouseWorldposition;
+    private Vector3  mouseWorldposition;
+    private Animator playeranimator;
+
     void Awake()
     {
+        if (playeranimator == null)
+        {
+            playeranimator = GetComponent<Animator>();
+        }
         if (inputmanager == null)
         {
             inputmanager = GetComponent<StarterAssetsInputs>();
@@ -58,12 +66,14 @@ public class PlayerShootingSystem : MonoBehaviour
                 startercontroller.SetCameraSensitivity(aimSensitivity);
                 transform.forward = Vector3.Lerp(transform.forward, AimDirection, Time.deltaTime * 20f);
                 startercontroller.SetRotateonmove(false);
+                playeranimator.SetLayerWeight(1, Mathf.Lerp(playeranimator.GetLayerWeight(1),1f,Time.deltaTime*7.125f));
             }
             else
             {
                 aimcam.gameObject.SetActive(false);
                 startercontroller.SetCameraSensitivity(normalSensitivity);
                 startercontroller.SetRotateonmove(true);
+                playeranimator.SetLayerWeight(1, Mathf.Lerp(playeranimator.GetLayerWeight(1),0f,Time.deltaTime*7.4827f));
             }
         }
         else
