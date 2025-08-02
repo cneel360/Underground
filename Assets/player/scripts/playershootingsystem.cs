@@ -14,13 +14,13 @@ public class PlayerShootingSystem : MonoBehaviour
     private ThirdPersonController startercontroller;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private float normalSensitivity;
-    [SerializeField] public LayerMask aimcolliderlayermask = new LayerMask();
+    [SerializeField] public LayerMask aimcolliderlayermask ;
     [SerializeField] private Transform debugtransform;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;
     private Vector3  mouseWorldposition;
-    private Animator playeranimator;
-    public GunAimCorrection gunaim;
+    private Animator playeranimator;//
+    //    public GunAimCorrection gunaim;
 
     void Awake()
     {
@@ -54,7 +54,7 @@ public class PlayerShootingSystem : MonoBehaviour
             {
                 debugtransform.position = raycasthit.point;
                 mouseWorldposition = raycasthit.point;
-                gunaim.raycalc(raycasthit);
+              //  gunaim.raycalc(raycasthit);
             }
             //   Debug.Log("Aim input state: " + inputmanager.aim);
 
