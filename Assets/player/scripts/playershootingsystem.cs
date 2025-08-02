@@ -14,7 +14,7 @@ public class PlayerShootingSystem : MonoBehaviour
     private ThirdPersonController startercontroller;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private float normalSensitivity;
-    [SerializeField] private LayerMask aimcolliderlayermask = new LayerMask();
+    [SerializeField] public LayerMask aimcolliderlayermask = new LayerMask();
     [SerializeField] private Transform debugtransform;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;

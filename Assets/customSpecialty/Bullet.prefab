@@ -99,6 +99,7 @@ MonoBehaviour:
   speed: 56.1
   excepttime: 3
   istimerrunning: 0
+  particlesystem: {fileID: 4310025419617860535, guid: 646507b82eb7dbb4884a5faeae476b62, type: 3}
 --- !u!1 &8861766672102527253
 GameObject:
   m_ObjectHideFlags: 0
