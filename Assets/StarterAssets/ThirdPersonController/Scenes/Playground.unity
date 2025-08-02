@@ -2066,7 +2066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimcam: {fileID: 2070925442155841063}
-  inputmanager: {fileID: 0}
+  inputmanager: {fileID: 1762682259}
   aimSensitivity: 0.5
   normalSensitivity: 1
   aimcolliderlayermask:
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   debugtransform: {fileID: 2082686758}
   bulletProjectile: {fileID: 1326669209716631065, guid: 8ffd6f0d0947df8469546bb520795e87, type: 3}
   spawnbulletpos: {fileID: 876426746}
-  gunaim: {fileID: 0}
+  gunaim: {fileID: 1808532311}
 --- !u!4 &1762682268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
