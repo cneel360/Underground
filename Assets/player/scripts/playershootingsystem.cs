@@ -89,11 +89,16 @@ public class PlayerShootingSystem : MonoBehaviour
         {
             Debug.LogError("InputManager is missing on PlayerShootingSystem.");
         }
-        if (inputmanager.shoot)
+        if (inputmanager.shoot && magazine > 0)
         {
+            magazine -= 1;
             Vector3 aimdir = (mouseWorldposition - spawnbulletpos.position).normalized;
             Instantiate(bulletProjectile, spawnbulletpos.position, Quaternion.LookRotation(aimdir, Vector3.up));
             inputmanager.shoot = false;
+        }
+        else if (magazine == 0)
+        {
+            Debug.Log("Out of Ammo");
         }
 
 
