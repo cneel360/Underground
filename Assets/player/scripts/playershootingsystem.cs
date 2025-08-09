@@ -14,12 +14,14 @@ public class PlayerShootingSystem : MonoBehaviour
     private ThirdPersonController startercontroller;
     [SerializeField] private float aimSensitivity;
     [SerializeField] private float normalSensitivity;
-    [SerializeField] public LayerMask aimcolliderlayermask ;
+    [SerializeField] public LayerMask aimcolliderlayermask;
     [SerializeField] private Transform debugtransform;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;
     public GameObject Gun;
     private Vector3 mouseWorldposition;
+    public int magazine;
+
     private Animator playeranimator;//
     //    public GunAimCorrection gunaim;
 
@@ -49,14 +51,14 @@ public class PlayerShootingSystem : MonoBehaviour
     {
         if (inputmanager != null)
         {
-             mouseWorldposition = Vector3.zero;
+            mouseWorldposition = Vector3.zero;
             Vector2 screencenterpoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
             Ray targetray = Camera.main.ScreenPointToRay(screencenterpoint);
             if (Physics.Raycast(targetray, out RaycastHit raycasthit, 999f, aimcolliderlayermask))
             {
                 debugtransform.position = raycasthit.point;
                 mouseWorldposition = raycasthit.point;
-              //  gunaim.raycalc(raycasthit);
+                //  gunaim.raycalc(raycasthit);
             }
             //   Debug.Log("Aim input state: " + inputmanager.aim);
 
@@ -72,7 +74,7 @@ public class PlayerShootingSystem : MonoBehaviour
                 startercontroller.SetRotateonmove(false);
                 Gun.SetActive(true);
                 playeranimator.SetLayerWeight(1, Mathf.Lerp(playeranimator.GetLayerWeight(1), 1f, Time.deltaTime * 7.125f));
-                
+
             }
             else
             {
@@ -90,11 +92,25 @@ public class PlayerShootingSystem : MonoBehaviour
         if (inputmanager.shoot)
         {
             Vector3 aimdir = (mouseWorldposition - spawnbulletpos.position).normalized;
-            Instantiate(bulletProjectile, spawnbulletpos.position, Quaternion.LookRotation(aimdir,Vector3.up));
+            Instantiate(bulletProjectile, spawnbulletpos.position, Quaternion.LookRotation(aimdir, Vector3.up));
             inputmanager.shoot = false;
         }
-       
-        
 
+
+
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+       // Debug.Log("something hit by controller");
+        if (hit.gameObject.CompareTag("ammocrate"))
+        {
+          //  Debug.Log("ammocrate hit by controller");
+            ammocrate ammocrate = hit.gameObject.GetComponent<ammocrate>();
+            if (ammocrate != null)
+            {
+                magazine = ammocrate.Collectbullets(magazine);
+            }
+        }
     }
 }

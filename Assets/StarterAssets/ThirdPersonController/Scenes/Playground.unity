@@ -1790,6 +1790,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1069088580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2958757796733671005, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+  m_PrefabInstance: {fileID: 2119706678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1069088585
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069088580}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1221041499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2857,6 +2889,7 @@ MonoBehaviour:
   bulletProjectile: {fileID: 1326669209716631065, guid: 8ffd6f0d0947df8469546bb520795e87, type: 3}
   spawnbulletpos: {fileID: 876426746}
   Gun: {fileID: 580313048}
+  magazine: 0
 --- !u!4 &1762682268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -3267,6 +3300,70 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &2119706678
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2958757796733671005, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_Name
+      value: Ammo Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.024022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.50000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.495708
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996927737320622370, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019678817953225926, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      propertyPath: ammonum
+      value: 19
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2958757796733671005, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1069088585}
+  m_SourcePrefab: {fileID: 100100000, guid: 99418e0d1388def468a61c62dbda3275, type: 3}
 --- !u!4 &2070925441714894818
 Transform:
   m_ObjectHideFlags: 3
@@ -3779,3 +3876,4 @@ SceneRoots:
   - {fileID: 132991806}
   - {fileID: 789643306}
   - {fileID: 2106404946}
+  - {fileID: 2119706678}
