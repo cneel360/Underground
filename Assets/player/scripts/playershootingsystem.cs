@@ -18,7 +18,8 @@ public class PlayerShootingSystem : MonoBehaviour
     [SerializeField] private Transform debugtransform;
     [SerializeField] private GameObject bulletProjectile;
     [SerializeField] private Transform spawnbulletpos;
-    private Vector3  mouseWorldposition;
+    public GameObject Gun;
+    private Vector3 mouseWorldposition;
     private Animator playeranimator;//
     //    public GunAimCorrection gunaim;
 
@@ -41,6 +42,7 @@ public class PlayerShootingSystem : MonoBehaviour
         {
             Debug.LogWarning("Aim camera not assigned in PlayerShootingSystem.");
         }
+        Gun.SetActive(false);
     }
 
     void Update()
@@ -68,6 +70,7 @@ public class PlayerShootingSystem : MonoBehaviour
                 startercontroller.SetCameraSensitivity(aimSensitivity);
                 transform.forward = Vector3.Lerp(transform.forward, AimDirection, Time.deltaTime * 20f);
                 startercontroller.SetRotateonmove(false);
+                Gun.SetActive(true);
                 playeranimator.SetLayerWeight(1, Mathf.Lerp(playeranimator.GetLayerWeight(1), 1f, Time.deltaTime * 7.125f));
                 
             }
@@ -77,6 +80,7 @@ public class PlayerShootingSystem : MonoBehaviour
                 startercontroller.SetCameraSensitivity(normalSensitivity);
                 startercontroller.SetRotateonmove(true);
                 playeranimator.SetLayerWeight(1, Mathf.Lerp(playeranimator.GetLayerWeight(1), 0f, Time.deltaTime * 7.4827f));
+                Gun.SetActive(false);
             }
         }
         else
