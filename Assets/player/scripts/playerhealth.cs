@@ -8,6 +8,7 @@ public class playerhealth : MonoBehaviour
     public float protection;
     public float health;
     public float finaldamage;
+    public GameOver gameOvermanager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,13 @@ public class playerhealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthbuffer = maxhealth -= 1;
+        healthbuffer = maxhealth - 1;
+        if (health <= 0)
+        {
+            Debug.Log("Player Died");
+            gameOvermanager.ActivateGameOver(1);
+
+        }
     }
     public void Damage(float damagenum)
     {
