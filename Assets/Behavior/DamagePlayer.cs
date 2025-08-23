@@ -2,25 +2,22 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-    public playerhealth health;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    public float DamageNum;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("player"))
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("Player"))
         {
-            health = collision.gameObject.GetComponent<playerhealth>();
-            Debug.Log("Attackedplayer");
-            health.Damage(2);
+            playerhealth playerHealthScript = collision.gameObject.GetComponent<playerhealth>();
+
+            if (playerHealthScript != null)
+            {
+                Debug.Log("Attacked player!");
+                playerHealthScript.Damage(DamageNum);
+                Destroy(gameObject);
+            }
         }
     }
 }
