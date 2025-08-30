@@ -11,13 +11,20 @@ public class DamagePlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerhealth playerHealthScript = collision.gameObject.GetComponent<playerhealth>();
+            Destroy(gameObject);
 
             if (playerHealthScript != null)
             {
                 Debug.Log("Attacked player!");
                 playerHealthScript.Damage(DamageNum);
-                Destroy(gameObject);
+
             }
         }
+        if (collision.gameObject.CompareTag("playerweapon"))
+        {
+            Destroy(gameObject);
+        }
+        
+        
     }
 }

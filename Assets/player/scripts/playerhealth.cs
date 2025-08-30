@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class playerhealth : MonoBehaviour
 
 {
@@ -8,7 +8,8 @@ public class playerhealth : MonoBehaviour
     public float protection;
     public float health;
     public float finaldamage;
-    public GameOver gameOvermanager;
+
+    //public GameOver gameOvermanager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,8 +25,8 @@ public class playerhealth : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Player Died");
-            gameOvermanager.ActivateGameOver(1);
-
+            //      gameOvermanager.ActivateGameOver(1);
+            SceneManager.LoadScene(1);
         }
     }
     public void Damage(float damagenum)
