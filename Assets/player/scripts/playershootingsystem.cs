@@ -21,6 +21,7 @@ public class PlayerShootingSystem : MonoBehaviour
     public GameObject Gun;
     private Vector3 mouseWorldposition;
     public int magazine;
+    
 
     private Animator playeranimator;//
     //    public GunAimCorrection gunaim;
@@ -89,7 +90,7 @@ public class PlayerShootingSystem : MonoBehaviour
         {
             Debug.LogError("InputManager is missing on PlayerShootingSystem.");
         }
-        if (inputmanager.shoot && magazine > 0)
+        if (inputmanager.shoot && magazine > 0 && inputmanager.aim)
         {
             magazine -= 1;
             Vector3 aimdir = (mouseWorldposition - spawnbulletpos.position).normalized;
@@ -98,7 +99,14 @@ public class PlayerShootingSystem : MonoBehaviour
         }
         else if (magazine == 0)
         {
+
             Debug.Log("Out of Ammo");
+            inputmanager.shoot = false;
+
+        }
+        else if (inputmanager.aim == false)
+        {
+            inputmanager.shoot = false;
         }
 
 
