@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8413818998458755124}
   - component: {fileID: 4136002066861318426}
   - component: {fileID: 6855252059049015442}
+  - component: {fileID: 7621436411372476340}
   m_Layer: 0
   m_Name: veitsoldier
   m_TagString: Untagged
@@ -134,6 +135,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.92751706, y: 2.0747457, z: 0.96193826}
   m_Center: {x: 0.19588608, y: 1.038872, z: -0.0426175}
+--- !u!114 &7621436411372476340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513700914652850821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7107785193dce924991a1a27d10d05ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 5838954854779953245}
+  animator: {fileID: 5402930018427762932}
 --- !u!1001 &1986515765065336165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,5 +217,10 @@ PrefabInstance:
 --- !u!4 &2025279447310246542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8e7c0284a1a3fc54882ca3e715a37c27, type: 3}
+  m_PrefabInstance: {fileID: 1986515765065336165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5402930018427762932 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8e7c0284a1a3fc54882ca3e715a37c27, type: 3}
   m_PrefabInstance: {fileID: 1986515765065336165}
   m_PrefabAsset: {fileID: 0}
