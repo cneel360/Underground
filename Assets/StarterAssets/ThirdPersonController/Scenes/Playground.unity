@@ -2377,32 +2377,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!1 &1070110722 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+--- !u!114 &1070110729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
   m_PrefabInstance: {fileID: 1963858357}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1070110729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070110722}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51bed2d90c3f6a043a810acc3884b1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1762682268}
-  distance: {x: 0, y: 0, z: 0}
-  self: {fileID: 0}
-  isplayerdetected: 0
-  distanceX: 0
-  distanceY: 0
-  distanceZ: 0
-  Groundplanedetectionrange: 0
-  Verticaldetectionrange: 0
 --- !u!1001 &1221041499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4139,16 +4124,33 @@ PrefabInstance:
         UnityEngine.CoreModule]], mscorlib]]'
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: 'managedReferences[7793545228959088822]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[playerdetectedcontroller,
+        Assembly-CSharp]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].Name
       value: patrolpoints
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 2
+      propertyPath: managedReferences[7793545228959088822].Name
+      value: Detection Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: m_BlackboardVariableOverridesList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959088822].m_Value
+      value: 
+      objectReference: {fileID: 1070110729}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[1]'
       value: 1939341050335723776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
+      value: 7793545228959088822
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].GUID.m_Value0
@@ -4157,6 +4159,14 @@ PrefabInstance:
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].GUID.m_Value1
       value: 8064704837939955150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959088822].GUID.m_Value0
+      value: 5095274421232480894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959088822].GUID.m_Value1
+      value: 5915188759060183090
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].m_Value.Array.size
@@ -4174,13 +4184,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: veitsoldier
       objectReference: {fileID: 0}
+    - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1762682268}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1070110729}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
 --- !u!1 &1973629834
 GameObject:
