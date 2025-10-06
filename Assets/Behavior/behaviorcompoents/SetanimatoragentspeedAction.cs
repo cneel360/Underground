@@ -14,7 +14,7 @@ public partial class SetanimatoragentspeedAction : Action
     protected override Status OnStart()
     {
         Agentspeed.Value = Enemyanimation.Value.agentspeed;
-        return Status.Running;
+        return Status.Success;
     }
 
   
