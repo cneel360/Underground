@@ -16,13 +16,14 @@ public class EnemyAnimation : MonoBehaviour
     private const float VelocityThreshold = 0.1f;
     private const float DefaultAgentSpeed = 3.5f;
 
-    [Header("Shot Clock")]
-    [Tooltip("Duration the agent is slowed after a hit before reverting to patrol animations.")]
+
+   // [Header("Shot Clock")]
+    //[Tooltip("Duration the agent is slowed after a hit before reverting to patrol animations.")]
     private const float ShotClockDuration = 5f;
     private float shotClockTimer;
     private bool isShotClockRunning;
-    
-    [Header("State")]
+    public float agentspeed;
+  //  [Header("State")]
     // noscopeanimoverride: true means we are in default patrol/idle animation loop (controlled by Update).
     // false means an event (like being scoped) is overriding the animation.
     public bool noScopeAnimOverride;
@@ -54,6 +55,7 @@ public class EnemyAnimation : MonoBehaviour
     void Update()
     {
         isAgentMoving = agent.velocity.magnitude > VelocityThreshold;
+        agentspeed = agent.speed;
         
         // --- Animation State Management ---
         if (noScopeAnimOverride)

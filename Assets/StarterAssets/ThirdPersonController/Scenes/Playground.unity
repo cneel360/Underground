@@ -2377,6 +2377,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1070110723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7621436411372476340, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+  m_PrefabInstance: {fileID: 1963858357}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7107785193dce924991a1a27d10d05ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1070110729 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
@@ -4129,6 +4140,11 @@ PrefabInstance:
         Assembly-CSharp]]'
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: 'managedReferences[7793545228959089021]'
+      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[EnemyAnimation,
+        Assembly-CSharp]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].Name
       value: patrolpoints
       objectReference: {fileID: 0}
@@ -4137,13 +4153,21 @@ PrefabInstance:
       value: Detection Controller
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959089021].Name
+      value: EnemyAnimController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[7793545228959088822].m_Value
       value: 
       objectReference: {fileID: 1070110729}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959089021].m_Value
+      value: 
+      objectReference: {fileID: 1070110723}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[1]'
       value: 1939341050335723776
@@ -4151,6 +4175,10 @@ PrefabInstance:
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: 'm_BlackboardVariableOverridesList.Array.data[2]'
       value: 7793545228959088822
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[3]'
+      value: 7793545228959089021
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].GUID.m_Value0
@@ -4167,6 +4195,14 @@ PrefabInstance:
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[7793545228959088822].GUID.m_Value1
       value: 5915188759060183090
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959089021].GUID.m_Value0
+      value: 9252472642708335890
+      objectReference: {fileID: 0}
+    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: managedReferences[7793545228959089021].GUID.m_Value1
+      value: 5924762808884048897
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[1939341050335723776].m_Value.Array.size
@@ -4188,6 +4224,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1762682268}
+    - target: {fileID: 7621436411372476340, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: agentspeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
