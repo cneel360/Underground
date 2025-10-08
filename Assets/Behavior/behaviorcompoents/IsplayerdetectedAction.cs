@@ -12,21 +12,21 @@ public partial class IsplayerdetectedAction : Action
     [SerializeReference] public BlackboardVariable<bool> Playerdetected;
     protected override Status OnStart()
     {
+        Debug.Log("Enemy:Scope in action");
         if (Controller.Value.isplayerdetected)
         {
+            Debug.Log("Found the player");
             Playerdetected.Value = true;
             return Status.Success;
-            
+
         }
-        else if (Controller.Value.isplayerdetected == false)
+        else  
         {
+            Debug.Log("Enemy:Cant find player");
             Playerdetected.Value = false;
-            return Status.Failure;
+            return Status.Success;
         }
-        else
-        {
-            return Status.Running;
-        }
+       
     }
 
    

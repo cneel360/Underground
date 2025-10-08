@@ -16,7 +16,7 @@ public class EnemyAnimation : MonoBehaviour
     private const float VelocityThreshold = 0.1f;
     private const float DefaultAgentSpeed = 3.5f;
 
-
+    public bool hasplayerbeendetected;
    // [Header("Shot Clock")]
     //[Tooltip("Duration the agent is slowed after a hit before reverting to patrol animations.")]
     private const float ShotClockDuration = 5f;
@@ -44,7 +44,7 @@ public class EnemyAnimation : MonoBehaviour
             enabled = false; // Disable script if critical components are missing
             return;
         }
-
+            
         // Initialize state
         noScopeAnimOverride = true; // Enemy starts in default patrol mode
         shotClockTimer = ShotClockDuration;
@@ -52,11 +52,11 @@ public class EnemyAnimation : MonoBehaviour
         agent.speed = DefaultAgentSpeed;
     }
 
-    void Update()
+ void Update()
     {
         isAgentMoving = agent.velocity.magnitude > VelocityThreshold;
         agentspeed = agent.speed;
-        
+          
         // --- Animation State Management ---
         if (noScopeAnimOverride)
         {
@@ -70,13 +70,13 @@ public class EnemyAnimation : MonoBehaviour
             // force the animation back to idle (0f).
             animator.SetFloat("patrol", 0f);
         }
-        
+
         // --- Shot Clock Timer ---
         if (isShotClockRunning)
         {
             shotClockTimer -= Time.deltaTime;
         }
-        
+
         // Check timer using <= for reliable float comparison (FIXED BUG)
         if (shotClockTimer <= 0f)
         {
@@ -84,8 +84,21 @@ public class EnemyAnimation : MonoBehaviour
             noScopeAnimOverride = true; // Revert to patrol/default state
             agent.speed = DefaultAgentSpeed; // Reset speed
             shotClockTimer = ShotClockDuration; // Reset timer
-        } 
+        }
+        if (hasplayerbeendetected && !isShotClockRunning)
+        {
+            agent.speed = 5f;
+            animator.SetFloat("patrol", .75f);
+        }
+        else if (!hasplayerbeendetected)
+        {
+            noScopeAnimOverride = true;
+              float patrolValue = isAgentMoving ? 0.5f : 0.0f;
+            animator.SetFloat("patrol", patrolValue);
+            
+        }
     }
+
 
     // Called when a trigger collider enters the enemy's trigger collider.
     public void OnTriggerEnter(Collider other)
@@ -122,18 +135,22 @@ public class EnemyAnimation : MonoBehaviour
     // Called when the target leaves the enemy's trigger collider.
     void OnTriggerExit(Collider other)
     {
-        // Must check tag to prevent unrelated triggers from resetting state (FIXED BUG)
-        if (other.gameObject.CompareTag("AimSphere"))
+        if (hasplayerbeendetected == false)
+        {
+            if (other.gameObject.CompareTag("AimSphere"))
         {
             // If the scope trigger is left, revert to default patrol state
             noScopeAnimOverride = true;
-            
+
             // Only reset speed if the shot clock isn't currently forcing a slower speed
             if (!isShotClockRunning)
             {
                 agent.speed = DefaultAgentSpeed;
             }
         }
+        }
+        // Must check tag to prevent unrelated triggers from resetting state (FIXED BUG)
+        
     }
 
     // Called when a solid collider hits the enemy (used for impact/weapon hits).
