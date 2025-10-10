@@ -87,7 +87,7 @@ public class EnemyAnimation : MonoBehaviour
         }
         if (hasplayerbeendetected && !isShotClockRunning)
         {
-            agent.speed = 5f;
+            agent.speed = 4f;
             animator.SetFloat("patrol", .75f);
         }
         else if (!hasplayerbeendetected)
