@@ -397,8 +397,8 @@ Transform:
   m_GameObject: {fileID: 179756200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 54.473, y: 25.024, z: -21.933}
+  m_LocalScale: {x: 3.5622, y: 1, z: 2.7206}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 487719734}
@@ -415,6 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4962db2ad1874dbf5554eb18e6405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 1348122346}
+  locationname: Inner Chamber
 --- !u!65 &179756203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -430,7 +432,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -459,7 +461,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 073adcb2f106cf448b7597e04b9b196d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3229,6 +3231,7 @@ GameObject:
   - component: {fileID: 1348122344}
   - component: {fileID: 1348122345}
   - component: {fileID: 1348122346}
+  - component: {fileID: 1348122347}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3277,10 +3280,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31a46d9aa9ebaf4fbf6170e837bbeae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  places: []
   timer: 0
   timeisrunning: 0
   name: 
-  text: {fileID: 0}
+  newname: 
+  text: {fileID: 668808572}
+--- !u!114 &1348122347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348122343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6dc69f70fdadd45ba6a0249ce3b377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1402827283
 PrefabInstance:
   m_ObjectHideFlags: 0
