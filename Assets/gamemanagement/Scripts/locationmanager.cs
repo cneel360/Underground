@@ -43,9 +43,21 @@ public class locationmanager : MonoBehaviour
     void nextname()
     {
         name = "";
-        name = newname;
-        newname = "";
-        timer = 5f;
+        if(newname == "")
+        {
+            name = "";
+            
+        }
+        else
+        {
+            name = newname;
+              newname = "";
+            timer = 5f;
         timeisrunning = true;
+        }
+       
+        
+       
+       
     }
 }

@@ -1,27 +1,69 @@
+
 using UnityEngine;
 
 public class datamanager : MonoBehaviour
 {
-    public static datamanager Instance;
+    //  root references
     public gamedata data;
+    public string jsongamedata;
+
+    // savedata
+
+    public Vector3 sysposition;
+    public int sysmagizine;
+    public float syshealth;
+    public int[] sysenemylivecount;
+    public float sysplayerprotection;
+    public int[] sysammocrateammocount;
+   public  Vector3[] sysenemypositions;
+    // debugtriggers
+    public bool debugsavetrigger;
+    public bool debugloadtrigger;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
     {
-        Instance = this;
+
+        data = new gamedata();
+
     }
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (debugsavetrigger)
+        {
+            Save();
+            debugsavetrigger = false;
+        }
+        if (debugloadtrigger)
+        {
+            Load();
+            debugloadtrigger = false;
+        }
+
+
+    }
+    void Save()
+    {
+        jsongamedata = JsonUtility.ToJson(data);
+        Debug.Log("game saved");
+
+    }
+    void Load()
+    {
+        data = JsonUtility.FromJson<gamedata>(jsongamedata);
+        Debug.Log("Data Loaded");
     }
 }
+
 
 [System.Serializable]
 public class gamedata
@@ -31,12 +73,13 @@ public class gamedata
     in the arrays do the same thing for saving but write to its respctive array
     Credits: idea courtesy of rhett
     */
-    Vector3 position;
-    int magizine;
-    float health;
-    int[] enemylivecount;
-    float playerprotection;
-    int[] ammocrateammocount;
+   public Vector3 position;
+public int magizine;
+     public float health;
+     public int[] enemylivecount;
+     public float playerprotection;
+    public int[] ammocrateammocount;
 
+   public Vector3[] enemypositions;
 
 }
