@@ -76,11 +76,15 @@ public class gamedata
    public Vector3 position;
 public int magizine;
      public float health;
-     public int[] enemylivecount;
-     public float playerprotection;
-    public int[] ammocrateammocount;
+  public int[] enemylivecount = new int[25]; 
+    
+    public float playerprotection;
+    
+    // **CORRECTED LINE for ammocrateammocount**
+    public int[] ammocrateammocount = new int[10]; 
 
-   public Vector3[] enemypositions;
+    // **CORRECTED LINE for enemypositions**
+    public Vector3[] enemypositions = new Vector3[25];
 
 }
 [System.Serializable]
