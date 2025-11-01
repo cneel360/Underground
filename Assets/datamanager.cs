@@ -9,13 +9,13 @@ public class datamanager : MonoBehaviour
 
     // savedata
 
-    public Vector3 sysposition;
-    public int sysmagizine;
-    public float syshealth;
-    public int[] sysenemylivecount;
-    public float sysplayerprotection;
-    public int[] sysammocrateammocount;
-   public  Vector3[] sysenemypositions;
+   // public Vector3 sysposition;
+    //public int sysmagizine;
+    //public float syshealth;
+    //public int[] sysenemylivecount;
+    //public float sysplayerprotection;
+    //public int[] sysammocrateammocount;
+   //public  Vector3[] sysenemypositions;
     // debugtriggers
     public bool debugsavetrigger;
     public bool debugloadtrigger;
@@ -81,5 +81,12 @@ public int magizine;
     public int[] ammocrateammocount;
 
    public Vector3[] enemypositions;
+
+}
+[System.Serializable]
+public class savedataconfig{
+    public int activesaveslot;
+    public int[] saveslots;
+
 
 }
