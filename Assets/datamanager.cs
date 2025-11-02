@@ -1,10 +1,12 @@
 
 using UnityEngine;
-
+using System.IO;
+using UnityEngine.SceneManagement;
 public class datamanager : MonoBehaviour
 {
     //  root references
     public gamedata data;
+    public savedataconfig savegameconfig;
     public string jsongamedata;
 
     // savedata
@@ -19,6 +21,9 @@ public class datamanager : MonoBehaviour
     // debugtriggers
     public bool debugsavetrigger;
     public bool debugloadtrigger;
+    // filestuff
+    string basepath;
+    string savefilepath;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,13 +31,23 @@ public class datamanager : MonoBehaviour
     void Awake()
     {
 
+        basepath = Application.persistentDataPath;
+     //   savegameconfig = new savedataconfig();
         data = new gamedata();
-
+        savefilepath = basepath + "/savefile1.json";
+        LoadDataConfig();
+        if(savegameconfig.loadfromsave == 1)
+        {
+            Debug.Log("Loading");
+            Load();
+        }
     }
 
     void Start()
     {
-
+       
+        print(savefilepath);
+        print(basepath);
     }
 
     // Update is called once per frame
@@ -54,13 +69,42 @@ public class datamanager : MonoBehaviour
     void Save()
     {
         jsongamedata = JsonUtility.ToJson(data);
+        System.IO.File.WriteAllText(savefilepath, jsongamedata);
         Debug.Log("game saved");
 
+
     }
-    void Load()
+    void PreLoad()
     {
-        data = JsonUtility.FromJson<gamedata>(jsongamedata);
+        savegameconfig.loadfromsave = 1;
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
+         
+    }    void Load()
+    {
+         if (System.IO.File.Exists(savefilepath))
+        {
+             jsongamedata = System.IO.File.ReadAllText(savefilepath);
+            data = JsonUtility.FromJson<gamedata>(jsongamedata);
+        }
         Debug.Log("Data Loaded");
+    }
+    void LoadDataConfig()
+    {
+        string configpath = basepath + "/savedataconfig.json";
+        if (System.IO.File.Exists(configpath))
+        {
+            string jsonholder = System.IO.File.ReadAllText(configpath);
+            savegameconfig = JsonUtility.FromJson<savedataconfig>(jsonholder);
+        }
+        else
+        {
+            string jsonholder = JsonUtility.ToJson(savegameconfig);
+            System.IO.File.WriteAllText(configpath, jsonholder);
+            LoadDataConfig();
+            Debug.Log("no save data config");
+            
+        }
     }
 }
 
@@ -91,6 +135,7 @@ public int magizine;
 public class savedataconfig{
     public int activesaveslot;
     public int[] saveslots;
+    public int loadfromsave;
 
 
 }

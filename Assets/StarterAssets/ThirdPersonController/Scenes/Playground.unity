@@ -3440,6 +3440,10 @@ MonoBehaviour:
     playerprotection: 0
     ammocrateammocount: 
     enemypositions: []
+  savegameconfig:
+    activesaveslot: 0
+    saveslots: 
+    loadfromsave: 1
   jsongamedata: 
   debugsavetrigger: 0
   debugloadtrigger: 0

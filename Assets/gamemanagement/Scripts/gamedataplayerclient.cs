@@ -9,6 +9,10 @@ public class gamedataplayerclient : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(datamanager.savegameconfig.loadfromsave ==1)
+        {
+            Loadgamedata();
+        }
         
     }
     void updateposition()
@@ -25,6 +29,12 @@ public class gamedataplayerclient : MonoBehaviour
     {
         float healthnum = playerhealth.health;
         datamanager.data.health = healthnum;
+    }
+     void Loadgamedata()
+    {
+        gameObject.transform.position = datamanager.data.position;
+        playershootsys.magazine = datamanager.data.magizine;
+        playerhealth.health = datamanager.data.health;
     }
     // Update is called once per frame
     void Update()

@@ -11,7 +11,11 @@ public class locationclient : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        manager.addplace(locationname);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            manager.addplace(locationname);
+        }
+        
     }
 
     // Update is called once per frame
