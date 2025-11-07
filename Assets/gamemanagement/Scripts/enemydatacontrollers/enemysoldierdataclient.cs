@@ -10,6 +10,8 @@ public class enemysoldierdataclient : MonoBehaviour
     {
    if(datamanager.savegameconfig.loadfromsave ==1)
         {
+            Debug.Log("Enemy Data Loaded from save");
+            Debug.Log("Data id (enemy):" + dataid);
             loadenemyposition();
             loadisalive();
         }
@@ -31,7 +33,7 @@ public class enemysoldierdataclient : MonoBehaviour
     }
     void loadenemyposition()
     {
-        enemy.transform.position = datamanager.data.enemypositions[dataid];
+      enemy.transform.position  =  datamanager.data.enemypositions[dataid];
 
     }
 void loadisalive()
