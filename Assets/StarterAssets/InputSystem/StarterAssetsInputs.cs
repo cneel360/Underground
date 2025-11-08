@@ -108,12 +108,12 @@ namespace StarterAssets
 
         public void AimInput(bool newAimState)
         {
-            
-            aim = newAimState;
-            
-         //   Debug.Log($"AimInput called. newAimState: {newAimState}, current 'aim' variable: {aim}");
-        }
 
+            aim = newAimState;
+
+            //   Debug.Log($"AimInput called. newAimState: {newAimState}, current 'aim' variable: {aim}");
+        }
+/*
         private void OnApplicationFocus(bool hasFocus)
         {
             SetCursorState(cursorLocked);
@@ -123,6 +123,7 @@ namespace StarterAssets
         {
             Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
         }
+        */
         void Update()
         {
             // You don't need continuous logging here for input state, as the OnAim/OnAimCanceled
