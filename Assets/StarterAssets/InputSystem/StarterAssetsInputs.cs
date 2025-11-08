@@ -15,6 +15,7 @@ namespace StarterAssets
         public bool jump;
         public bool sprint;
         public bool aim;
+        public bool pauseinput;
         public bool AimSwitch;
         public bool shoot;  // This public variable will be updated
 
@@ -44,14 +45,18 @@ namespace StarterAssets
 
         public void OnJump(InputValue value)
         {
-         //  Debug.Log("OnJump called.");
+            //  Debug.Log("OnJump called.");
             JumpInput(value.isPressed);
+        }
+        public void OnPause(InputValue value)
+        {
+            pauseinput = value.isPressed;
         }
         public void OnShoot(InputValue value)
         {
             ShootInput(value.isPressed);
         }
-
+          
         public void OnSprint(InputValue value)
         {
             //       Debug.Log("OnSprint called.");

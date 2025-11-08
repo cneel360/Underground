@@ -1,0 +1,34 @@
+{
+    "name": "gamemanageraction",
+    "maps": [
+        {
+            "name": "player",
+            "id": "bbb816d3-2cea-434f-af28-681991e8c2ff",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "45112134-000c-4169-8c84-55476067afd7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "27e4a7d5-5e04-46a0-b0d8-1c8034787814",
+                    "path": "<Keyboard>/#(P)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
