@@ -7,7 +7,7 @@ public class playerpauseclient : MonoBehaviour
     public pausemanager pause;
    public ThirdPersonController playercontroller;
 public PlayerShootingSystem playershoot;
-    bool activepause;
+   public bool activepause;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +21,7 @@ void updatecomponentactivestate()
     // Update is called once per frame
     void Update()
     {
-        activepause = !pause;
+        activepause = !pause.gamepaused;
         updatecomponentactivestate();
         
     }
