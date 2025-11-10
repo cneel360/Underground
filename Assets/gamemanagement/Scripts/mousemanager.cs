@@ -14,14 +14,15 @@ public class mousemanager : MonoBehaviour
     {
 
     }
+
      private void OnApplicationFocus(bool hasFocus)
         {
             SetCursorState(cursorLocked);
         }
 
-        private void SetCursorState(bool newState)
+    private void SetCursorState(bool newState)
     {
-            if (cursorLocked)
+        if (cursorLocked)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -29,6 +30,12 @@ public class mousemanager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
-            
-        }
+
+    }
+        
+         public  void ChangeCursorState(bool newstate)
+    {
+        cursorLocked = newstate;
+        SetCursorState(cursorLocked);
+    }
 }
