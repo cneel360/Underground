@@ -7,7 +7,10 @@ public class pausemanager : MonoBehaviour
     public mousemanager cursormanage;
     public GameObject pauseui;
     public bool gamepaused;
-
+    void Awake()
+    {
+        Time.timeScale = 1;
+            }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,9 +42,11 @@ public class pausemanager : MonoBehaviour
 
     public void OnPause()
     {
+
         Debug.Log("game paused");
         pauseui.SetActive(true);
         cursormanage.ChangeCursorState(false);
+        Time.timeScale = 0;
 
      //   inputmanager.pauseinput = false;
     }
@@ -50,5 +55,6 @@ public class pausemanager : MonoBehaviour
         Debug.Log("Game Unpaused");
         pauseui.SetActive(false);
         cursormanage.ChangeCursorState(true);
+        Time.timeScale = 1;
     }
 }

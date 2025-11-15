@@ -2,6 +2,8 @@
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
+
 public class datamanager : MonoBehaviour
 {
     //  root references
@@ -77,6 +79,7 @@ public    void Update()
    public void PreLoad()
     {
         savegameconfig.loadfromsave = 1;
+        SaveDataConfig();
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
 
@@ -84,20 +87,22 @@ public    void Update()
   public  void PreNewGame()
     {
         savegameconfig.loadfromsave = 0;
+        SaveDataConfig();
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
          
-    } 
-     public  void Load()
+    }
+    public void Load()
     {
-         if (System.IO.File.Exists(savefilepath))
+        if (System.IO.File.Exists(savefilepath))
         {
-             jsongamedata = System.IO.File.ReadAllText(savefilepath);
+            jsongamedata = System.IO.File.ReadAllText(savefilepath);
             data = JsonUtility.FromJson<gamedata>(jsongamedata);
         }
         Debug.Log("Data Loaded");
     }
- public   void LoadDataConfig()
+
+    public void LoadDataConfig()
     {
         string configpath = basepath + "/savedataconfig.json";
         if (System.IO.File.Exists(configpath))
@@ -111,8 +116,15 @@ public    void Update()
             System.IO.File.WriteAllText(configpath, jsonholder);
             LoadDataConfig();
             Debug.Log("no save data config");
-            
+
         }
+
+    }
+    public void SaveDataConfig()
+    {
+         string configpath = basepath + "/savedataconfig.json";
+        string jsonholder = JsonUtility.ToJson(savegameconfig);
+            System.IO.File.WriteAllText(configpath, jsonholder);
     }
 }
 
