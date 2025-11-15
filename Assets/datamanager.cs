@@ -28,7 +28,7 @@ public class datamanager : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void Awake()
+  public  void Awake()
     {
 
         basepath = Application.persistentDataPath;
@@ -43,7 +43,7 @@ public class datamanager : MonoBehaviour
         }
     }
 
-    void Start()
+  public  void Start()
     {
        
         print(savefilepath);
@@ -51,7 +51,7 @@ public class datamanager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+public    void Update()
     {
         if (debugsavetrigger)
         {
@@ -66,7 +66,7 @@ public class datamanager : MonoBehaviour
 
 
     }
-    void Save()
+ public void Save()
     {
         jsongamedata = JsonUtility.ToJson(data);
         System.IO.File.WriteAllText(savefilepath, jsongamedata);
@@ -74,13 +74,21 @@ public class datamanager : MonoBehaviour
 
 
     }
-    void PreLoad()
+   public void PreLoad()
     {
         savegameconfig.loadfromsave = 1;
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index);
+
+    }
+  public  void PreNewGame()
+    {
+        savegameconfig.loadfromsave = 0;
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(index);
          
-    }    void Load()
+    } 
+     public  void Load()
     {
          if (System.IO.File.Exists(savefilepath))
         {
@@ -89,7 +97,7 @@ public class datamanager : MonoBehaviour
         }
         Debug.Log("Data Loaded");
     }
-    void LoadDataConfig()
+ public   void LoadDataConfig()
     {
         string configpath = basepath + "/savedataconfig.json";
         if (System.IO.File.Exists(configpath))
