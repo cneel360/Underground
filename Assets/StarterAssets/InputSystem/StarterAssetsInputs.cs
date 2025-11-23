@@ -3,6 +3,7 @@ using UnityEngine;
 
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements.Experimental;
 #endif
 
 namespace StarterAssets
@@ -17,7 +18,8 @@ namespace StarterAssets
         public bool aim;
         public bool pauseinput;
         public bool AimSwitch;
-        public bool shoot;  // This public variable will be updated
+        public bool shoot;
+        public bool isDialogActivate;  // This public variable will be updated
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -41,6 +43,10 @@ namespace StarterAssets
             {
                 LookInput(value.Get<Vector2>());
             }
+        }
+        public  void OnDialogstart()
+        {
+            isDialogActivate = true;
         }
 
         public void OnJump(InputValue value)
