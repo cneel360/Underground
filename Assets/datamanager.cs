@@ -26,6 +26,7 @@ public class datamanager : MonoBehaviour
     // filestuff
     string basepath;
     string savefilepath;
+    public gamedataplayerclient playerdata;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,6 +43,8 @@ public class datamanager : MonoBehaviour
         {
             Debug.Log("Loading");
             Load();
+            playerdata.Loadgamedata();
+
         }
     }
 

@@ -1,12 +1,17 @@
 using UnityEngine;
-
+ using System.Threading;
 public class gamedataplayerclient : MonoBehaviour
 {
     public datamanager datamanager;
     public Vector3 objposition;
     public PlayerShootingSystem playershootsys;
     public playerhealth playerhealth;
+    public CharacterController characterController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+           characterController = GetComponent<CharacterController>();
+    }
     void Start()
     {
         if(datamanager.savegameconfig.loadfromsave ==1)
@@ -30,9 +35,12 @@ public class gamedataplayerclient : MonoBehaviour
         float healthnum = playerhealth.health;
         datamanager.data.health = healthnum;
     }
-     void Loadgamedata()
+   public  void Loadgamedata()
     {
+    //    Thread.Sleep(20);
+    characterController.enabled = false;
         gameObject.transform.position = datamanager.data.position;
+        characterController.enabled = true;
         playershootsys.magazine = datamanager.data.magizine;
         playerhealth.health = datamanager.data.health;
     }

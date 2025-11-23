@@ -4697,6 +4697,7 @@ GameObject:
   - component: {fileID: 1348122350}
   - component: {fileID: 1348122351}
   - component: {fileID: 1348122352}
+  - component: {fileID: 1348122353}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4778,6 +4779,7 @@ MonoBehaviour:
   jsongamedata: 
   debugsavetrigger: 0
   debugloadtrigger: 0
+  playerdata: {fileID: 0}
 --- !u!114 &1348122348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4826,7 +4828,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348122343}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26902cecccf17a446b1011d17bda3327, type: 3}
   m_Name: 
@@ -4835,6 +4837,33 @@ MonoBehaviour:
   dialogindicator: {fileID: 1840754386}
   dialogtext: {fileID: 735133589}
   activedialog: []
+  maxdialoglength: 0
+--- !u!114 &1348122353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348122343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c971cf79a675b548a5f8f84b13e53a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueContainer: {fileID: 0}
+  localizationManager: {fileID: 0}
+  dialogueAudioSource: {fileID: 0}
+  musicAudioSource: {fileID: 0}
+  MainUI: {fileID: 0}
+  StartDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EndDialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueUIManager: {fileID: 0}
+  listOfOpenedNodes: []
+  listOfOpenedEvents: []
 --- !u!1 &1384012056
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,7 +5402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1541470283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6136,6 +6165,7 @@ MonoBehaviour:
   objposition: {x: 0, y: 0, z: 0}
   playershootsys: {fileID: 1762682266}
   playerhealth: {fileID: 1762682278}
+  characterController: {fileID: 0}
 --- !u!114 &1762682286 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -6351,7 +6381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1840754387
 RectTransform:
   m_ObjectHideFlags: 0
