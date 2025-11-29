@@ -13,18 +13,17 @@ public class playerdetectedcontroller : MonoBehaviour
     public float distanceZ;
     public float Groundplanedetectionrange;
     public float Verticaldetectionrange;
+    public float fightrange;
+    public float fightvertrange;
 
-
+ public bool shootrange;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         self = gameObject.transform;   
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        distance = player.position - self.position;
+    void detectplayer(){
+           distance = player.position - self.position;
         distanceX = Mathf.Abs(distance.x);
         distanceY = Mathf.Abs(distance.y);
         distanceZ = Mathf.Abs(distance.z);
@@ -45,6 +44,32 @@ public class playerdetectedcontroller : MonoBehaviour
             isplayerdetected =false;
         }
 
+    }
+    void shootingrangedetect()
+    {
+        if(distanceX<fightrange && distanceZ < fightrange)
+        {
+            if (distanceY < fightvertrange)
+            {
+                shootrange =true;
+            }
+            else
+            {
+                shootrange = false;
+            }
+        }
+        else
+        {
+            shootrange = false;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+     detectplayer();
+     shootingrangedetect();
 
     }
+
 }

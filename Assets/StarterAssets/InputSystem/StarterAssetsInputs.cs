@@ -44,9 +44,11 @@ namespace StarterAssets
                 LookInput(value.Get<Vector2>());
             }
         }
-        public  void OnDialogstart()
+        public  void OnDialogstart(InputValue value)
         {
+
             isDialogActivate = true;
+            Debug.Log("dialoge  input on");
         }
 
         public void OnJump(InputValue value)

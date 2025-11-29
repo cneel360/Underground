@@ -38,4 +38,5 @@ public class mousemanager : MonoBehaviour
         cursorLocked = newstate;
         SetCursorState(cursorLocked);
     }
+    
 }

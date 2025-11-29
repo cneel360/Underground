@@ -530,9 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62ea77e68f0af843bfe77ebb4c73dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myconvo: {fileID: 0}
-  inputs: {fileID: 0}
-  mousemanager: {fileID: 0}
+  myconvo: {fileID: 202767308}
+  inputs: {fileID: 1762682259}
+  mousemanager: {fileID: 1348122348}
   dialogeactive: 0
 --- !u!65 &130999534
 BoxCollider:
@@ -578,7 +578,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e1ce98334c0150d48b5747817b701a0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -617,7 +617,7 @@ Transform:
   m_GameObject: {fileID: 130999532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.978012, y: -0.304, z: -7.25}
+  m_LocalPosition: {x: 9.978012, y: 0.47, z: -7.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -939,7 +939,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 130999533}
+        m_TargetAssemblyTypeName: conversationstarter, Assembly-CSharp
+        m_MethodName: EndDialoge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &202767309
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -986,7 +998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: cf5ff84ec03b899438a5bd0cf15c6617, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5038,7 +5050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -280
+      value: -189
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472087, guid: d9fa78e8c3c4f2b4b8f7f77ca8426cca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6105,7 +6117,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 130999533}
+        m_TargetAssemblyTypeName: conversationstarter, Assembly-CSharp
+        m_MethodName: EndDialoge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 5
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -6139,7 +6163,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 130999533}
+        m_TargetAssemblyTypeName: conversationstarter, Assembly-CSharp
+        m_MethodName: EndDialoge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 4
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -6978,6 +7014,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1762682268}
+    - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: fightrange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: shootrange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: fightvertrange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7621436411372476340, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: agentspeed
       value: 3.5
