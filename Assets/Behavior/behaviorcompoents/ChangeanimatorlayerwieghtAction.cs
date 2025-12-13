@@ -15,7 +15,7 @@ public partial class ChangeanimatorlayerwieghtAction : Action
     protected override Status OnStart()
     {
         Animator.Value.SetLayerWeight(Layer,Value);
-        return Status.Running;
+        return Status.Success;
     }
 
    

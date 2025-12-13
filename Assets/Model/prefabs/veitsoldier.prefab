@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6855252059049015442}
   - component: {fileID: 7621436411372476340}
   - component: {fileID: 6779966383968934229}
+  - component: {fileID: 2570010457764819687}
   m_Layer: 0
   m_Name: veitsoldier
   m_TagString: Untagged
@@ -102,6 +103,11 @@ MonoBehaviour:
   m_Graph: {fileID: 5799167283207825589, guid: 9fd116a37a40bf042b8b168d6791779e, type: 2}
   m_BlackboardVariableOverridesList:
   - rid: 1939340891781333056
+  - rid: 1939341050335723776
+  - rid: 7793545228959088822
+  - rid: 7793545228959089021
+  - rid: 7793545282840428733
+  - rid: 8162608972922093965
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -115,6 +121,48 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 6513700914652850821}
+    - rid: 1939341050335723776
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1016341124900977832
+          m_Value1: 8064704837939955150
+        Name: patrolpoints
+        m_Value:
+        - {fileID: 0}
+        - {fileID: 0}
+    - rid: 7793545228959088822
+      type: {class: 'BlackboardVariable`1[[playerdetectedcontroller, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5095274421232480894
+          m_Value1: 5915188759060183090
+        Name: Detection Controller
+        m_Value: {fileID: 6779966383968934229}
+    - rid: 7793545228959089021
+      type: {class: 'BlackboardVariable`1[[EnemyAnimation, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 9252472642708335890
+          m_Value1: 5924762808884048897
+        Name: EnemyAnimController
+        m_Value: {fileID: 7621436411372476340}
+    - rid: 7793545282840428733
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 11134339234949536730
+          m_Value1: 9032633438150913912
+        Name: Player
+        m_Value: {fileID: 0}
+    - rid: 8162608972922093965
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 18107595276865740275
+          m_Value1: 17324184151077771132
+        Name: enemyanimator
+        m_Value: {fileID: 5402930018427762932}
 --- !u!65 &6855252059049015442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150,8 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5838954854779953245}
   animator: {fileID: 5402930018427762932}
-  noScopeAnimOverride: 0
-  isAgentMoving: 0
+  hasPlayerBeenDetected: 0
 --- !u!114 &6779966383968934229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +220,54 @@ MonoBehaviour:
   distanceZ: 0
   Groundplanedetectionrange: 10
   Verticaldetectionrange: 4
+  fightrange: 7
+  fightvertrange: 2
+  shootrange: 0
+--- !u!114 &2570010457764819687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513700914652850821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164e1912dfef6b146b2b977e82df0011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazine: 0
+  mastersys: {fileID: 0}
+--- !u!1 &7153243551197987334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5388718486756547101}
+  m_Layer: 0
+  m_Name: enemyshootroot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5388718486756547101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7153243551197987334}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7710786089891659289}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1986515765065336165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,7 +419,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
     - {fileID: -8700617353114198275, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5388718486756547101}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
 --- !u!4 &7710786089891659289 stripped
