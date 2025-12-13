@@ -5,7 +5,7 @@ public class enemyfightsys : MonoBehaviour
     public GameObject player;
     public Transform playertransform;
     public Vector3 playerpos;
-    
+     public Vector3 oppplayerpos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +14,7 @@ public class enemyfightsys : MonoBehaviour
 void UpdatePlayerTransform()
     {
       playerpos = playertransform.position;
+      oppplayerpos = playerpos * -1;
     }
   void initplayertransform()
     {
