@@ -23,15 +23,7 @@ public partial class ChangeanimatorlayerwieghtAction : Action
 
         return Status.Success;
     }
-    void lerplayerweight()
-    {
-        
-    for(int i = 0; i<LerpTime.Value; i++)
-        {
-            Animator.Value.SetLayerWeight(Layer,Value);
-            
-        }
-    }
+    
 
    
 }

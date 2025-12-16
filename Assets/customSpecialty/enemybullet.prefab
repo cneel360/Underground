@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3691916373967387925}
   - component: {fileID: 4126256834201487421}
   - component: {fileID: 5681871261143351993}
-  - component: {fileID: 4921780738327110229}
+  - component: {fileID: 1605896513207959057}
   m_Layer: 0
   m_Name: enemybullet
-  m_TagString: playerweapon
+  m_TagString: enemyweapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4921780738327110229
+--- !u!114 &1605896513207959057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326669209716631065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb20bcdda1f6fbd4db9f74cc5f41eca4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5507361c42487cd428b647c18d1caef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 56.1
-  excepttime: 3
+  speed: 0
+  excepttime: 20
   istimerrunning: 0
-  particlesystem: {fileID: 4310025419617860535, guid: 646507b82eb7dbb4884a5faeae476b62, type: 3}
+  particlesystem: {fileID: 0}
 --- !u!1 &8861766672102527253
 GameObject:
   m_ObjectHideFlags: 0
