@@ -11,6 +11,9 @@ public class enemyfighter : MonoBehaviour
     public GameObject troopcontroller;
     public playerdetectedcontroller pdc;
     public Animator EnemyAnim;
+    public Transform spawnbulletpos;
+    Vector3 aimspot;
+    Vector3 aimdir;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +25,11 @@ public class enemyfighter : MonoBehaviour
        //  troopcontroller.transform.forward = mastersys.playerpos;
         gun.transform.forward = mastersys.oppplayerpos;
         aimgunanimation(1,1);
+    }
+    public void processaim()
+    {
+        aimspot = mastersys.playerpos;
+          aimdir = (aimspot- spawnbulletpos.position).normalized;
     }
  void  aimgunanimation(int Layer,float Value)
     {
