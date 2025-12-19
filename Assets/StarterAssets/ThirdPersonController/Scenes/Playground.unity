@@ -3553,6 +3553,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7153243551197987334, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
   m_PrefabInstance: {fileID: 1963858357}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &984340119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+  m_PrefabInstance: {fileID: 1963858357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6901,6 +6906,10 @@ PrefabInstance:
       propertyPath: enemyshootroot
       value: 
       objectReference: {fileID: 984340118}
+    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: spawnbulletpos
+      value: 
+      objectReference: {fileID: 984340119}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: troopcontroller
       value: 
