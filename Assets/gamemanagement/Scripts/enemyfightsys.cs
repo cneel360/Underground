@@ -50,7 +50,9 @@ void UpdatePlayerTransform()
     }
     void countdowncooldown()
     {
-        if(pooltimout > 0)
+        if (timoutineffect)
+        {
+          if(pooltimout > 0)
         {
               pooltimout -= Time.deltaTime;
         }
@@ -58,7 +60,9 @@ void UpdatePlayerTransform()
         {
             timoutineffect = false;
         }
-      
+        
+        }
+        
     }
     public int aimcheck(playerdetectedcontroller pdc, Transform enemytransform) 
     {
@@ -78,6 +82,7 @@ void UpdatePlayerTransform()
     void Update()
     {
         reloadammostockpile();
+        countdowncooldown();
         UpdatePlayerTransform();
     }
 }

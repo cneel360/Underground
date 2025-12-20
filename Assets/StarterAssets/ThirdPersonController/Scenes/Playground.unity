@@ -4821,7 +4821,7 @@ GameObject:
   - component: {fileID: 1384012059}
   m_Layer: 0
   m_Name: vietsoldiercontroller
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6885,6 +6885,10 @@ PrefabInstance:
     - target: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: m_Name
       value: veitsoldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: player

@@ -25,14 +25,18 @@ public class enemybulletcontroller : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // The 'collision' variable contains info about the hit, like the object hit
-        Debug.Log("Collided with: " + collision.gameObject.name);
+         bool selfhittag = collision.gameObject.CompareTag("enemy") == true;
+         if(!selfhittag){  Debug.Log("[ENEMY BULLETS]Collided with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             HitPlayer();
         }
         Instantiate(particlesystem, transform.position, transform.rotation);
-        Destroy(gameObject);
+        Destroy(gameObject);}
+
+
+        // The 'collision' variable contains info about the hit, like the object hit
+      
     }
    void HitPlayer()
     {

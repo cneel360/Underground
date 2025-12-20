@@ -17,7 +17,7 @@ public class enemyfighter : MonoBehaviour
     public int maxammoload;
     Vector3 aimspot;
     Vector3 aimdir;
-
+bool running_aim_anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,19 +26,24 @@ public class enemyfighter : MonoBehaviour
     }
     public void aim()
     {
-        gameObject.transform.forward = mastersys.oppplayerpos;
+         Vector3 directionToPlayer = (mastersys.playerpos - transform.position).normalized;
+        gameObject.transform.forward = directionToPlayer;
        //  troopcontroller.transform.forward = mastersys.playerpos;
-        gun.transform.forward = mastersys.oppplayerpos;
-        aimgunanimation(1,1);
+        gun.transform.forward = directionToPlayer;
+        aimgunanimation(1,1f,5f);
+        
     }
     public void processaim()
     {
         aimspot = mastersys.playerpos;
           aimdir = (aimspot- spawnbulletpos.position).normalized;
     }
- void  aimgunanimation(int Layer,float Value)
+ void  aimgunanimation(int Layer,float Value, float speed)
     {
-     EnemyAnim.SetLayerWeight(Layer,Value);   
+     float currentWeight = EnemyAnim.GetLayerWeight(Layer);
+    float newWeight = Mathf.Lerp(currentWeight,Value, Time.deltaTime * speed);
+    EnemyAnim.SetLayerWeight(Layer, newWeight);
+    
     }
 
     public void init()
@@ -50,7 +55,7 @@ public class enemyfighter : MonoBehaviour
         }
         else
         {
-            aimgunanimation(1,0);
+            aimgunanimation(1,0,5f);
         }
 
        
