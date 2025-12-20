@@ -3548,16 +3548,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887699072}
   m_CullTransparentMesh: 1
---- !u!1 &984340118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7153243551197987334, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-  m_PrefabInstance: {fileID: 1963858357}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &984340119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-  m_PrefabInstance: {fileID: 1963858357}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1028513131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,17 +3914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7107785193dce924991a1a27d10d05ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1070110729 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-  m_PrefabInstance: {fileID: 1963858357}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845656913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51bed2d90c3f6a043a810acc3884b1ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1070110734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2576267616696401416, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
@@ -4170,11 +4149,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 654971681}
   m_SourcePrefab: {fileID: 100100000, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
---- !u!1 &1244085696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6938331465410389155, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-  m_PrefabInstance: {fileID: 1963858357}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1275477811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,9 +4194,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 20303842}
-  playertransform: {fileID: 0}
+  playertransform: {fileID: 1762682268}
   playerpos: {x: 0, y: 0, z: 0}
   oppplayerpos: {x: 0, y: 0, z: 0}
+  ammopool: 20
+  maxstockpool: 25
+  pooltimout: 2.5
+  timoutineffect: 0
 --- !u!1 &1286615630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6329,6 +6307,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 699211456}
     m_Modifications:
+    - target: {fileID: 1906264200871691474, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: datamanager
+      value: 
+      objectReference: {fileID: 1348122347}
     - target: {fileID: 2196643079102435083, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: target
       value: 
@@ -6385,16 +6367,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerArmature
       objectReference: {fileID: 0}
+    - target: {fileID: 5459532636622584094, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1348122350}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1762682285}
-    - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1762682292}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
 --- !u!114 &1762682259 stripped
 MonoBehaviour:
@@ -6445,50 +6425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2fd30acbc134a74d9ef6621a8a6f42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1762682285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20303842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 857ad98f9f5471844b9ad7221b2d82e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  datamanager: {fileID: 1348122347}
-  objposition: {x: 0, y: 0, z: 0}
-  playershootsys: {fileID: 1762682266}
-  playerhealth: {fileID: 1762682278}
-  characterController: {fileID: 0}
---- !u!114 &1762682286 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
-  m_PrefabInstance: {fileID: 1762682258}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20303842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1762682292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20303842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc35411d480ccbe4f9f45d2f3681be18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pause: {fileID: 1348122350}
-  playercontroller: {fileID: 1762682286}
-  playershoot: {fileID: 1762682266}
-  activepause: 0
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6883,33 +6819,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1384012057}
     m_Modifications:
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 1244085696}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: pdc
-      value: 
-      objectReference: {fileID: 1070110729}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: EnemyAnim
-      value: 
-      objectReference: {fileID: 1925613706}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: mastersys
       value: 
       objectReference: {fileID: 1275477813}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: bulletmodel
-      value: 
-      objectReference: {fileID: 1326669209716631065, guid: 92d8df0a9fa430b409cb3d7a5a8afd42, type: 3}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: enemyshootroot
-      value: 
-      objectReference: {fileID: 984340118}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: spawnbulletpos
-      value: 
-      objectReference: {fileID: 984340119}
+      propertyPath: maxammoload
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: troopcontroller
       value: 
@@ -6955,38 +6871,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: 'managedReferences[7711537333069939332]'
-      value: 'Unity.Behavior Unity.Behavior.BlackboardVariable`1[[System.Boolean,
-        mscorlib]]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: managedReferences[7711537333069939332].Name
-      value: treecontrolsshhotanim
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_BlackboardVariableOverridesList.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: managedReferences[7711537333069939332].m_Value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: managedReferences[7793545282840428733].m_Value
       value: 
       objectReference: {fileID: 20303842}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: 'm_BlackboardVariableOverridesList.Array.data[6]'
-      value: 7711537333069939332
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: managedReferences[7711537333069939332].GUID.m_Value0
-      value: 1542860830177894987
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: managedReferences[7711537333069939332].GUID.m_Value1
-      value: 9480094600991002372
-      objectReference: {fileID: 0}
     - target: {fileID: 4136002066861318426, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: 'managedReferences[1939341050335723776].m_Value.Array.data[0]'
       value: 

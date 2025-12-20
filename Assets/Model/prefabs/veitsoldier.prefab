@@ -108,6 +108,7 @@ MonoBehaviour:
   - rid: 7793545228959089021
   - rid: 7793545282840428733
   - rid: 8162608972922093965
+  - rid: 7711537333069939332
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -131,6 +132,14 @@ MonoBehaviour:
         m_Value:
         - {fileID: 0}
         - {fileID: 0}
+    - rid: 7711537333069939332
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1542860830177894987
+          m_Value1: 9480094600991002372
+        Name: treecontrolsshhotanim
+        m_Value: 0
     - rid: 7793545228959088822
       type: {class: 'BlackboardVariable`1[[playerdetectedcontroller, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -237,6 +246,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magazine: 0
   mastersys: {fileID: 0}
+  gun: {fileID: 6938331465410389155}
+  enemyshootroot: {fileID: 7153243551197987334}
+  bulletmodel: {fileID: 1326669209716631065, guid: 92d8df0a9fa430b409cb3d7a5a8afd42, type: 3}
+  troopcontroller: {fileID: 0}
+  pdc: {fileID: 6779966383968934229}
+  EnemyAnim: {fileID: 5402930018427762932}
+  spawnbulletpos: {fileID: 5388718486756547101}
 --- !u!1 &7153243551197987334
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +441,11 @@ PrefabInstance:
       addedObject: {fileID: 5388718486756547101}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
+--- !u!1 &6938331465410389155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}
+  m_PrefabInstance: {fileID: 7820657317870737906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7710786089891659289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac1d2dcdea6b44a4ba8397af58d2ed49, type: 3}

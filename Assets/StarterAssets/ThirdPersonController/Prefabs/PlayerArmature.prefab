@@ -1126,6 +1126,8 @@ GameObject:
   - component: {fileID: 1771035037102254713}
   - component: {fileID: 7876208819610382664}
   - component: {fileID: 211553891008014050}
+  - component: {fileID: 1906264200871691474}
+  - component: {fileID: 5459532636622584094}
   m_Layer: 6
   m_Name: PlayerArmature
   m_TagString: Player
@@ -1277,8 +1279,10 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   aim: 0
+  pauseinput: 0
   AimSwitch: 0
   shoot: 0
+  isDialogActivate: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -1469,6 +1473,39 @@ CapsuleCollider:
   m_Height: 2.5076275
   m_Direction: 1
   m_Center: {x: 0.24671006, y: 0.75381374, z: 0}
+--- !u!114 &1906264200871691474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857ad98f9f5471844b9ad7221b2d82e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  datamanager: {fileID: 0}
+  objposition: {x: 0, y: 0, z: 0}
+  playershootsys: {fileID: 2926016551242164047}
+  playerhealth: {fileID: 7876208819610382664}
+  characterController: {fileID: 0}
+--- !u!114 &5459532636622584094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc35411d480ccbe4f9f45d2f3681be18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  playercontroller: {fileID: 4416926081852918490}
+  playershoot: {fileID: 2926016551242164047}
+  activepause: 0
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
