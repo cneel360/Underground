@@ -3935,6 +3935,11 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 5838954854779953245, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
   m_PrefabInstance: {fileID: 1963858357}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1075142492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 537171133318529478, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 1762682258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1091091250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,7 +4199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 20303842}
-  playertransform: {fileID: 1762682268}
+  playertransform: {fileID: 1075142492}
   playerpos: {x: 0, y: 0, z: 0}
   oppplayerpos: {x: 0, y: 0, z: 0}
   ammopool: 20

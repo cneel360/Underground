@@ -62,9 +62,9 @@ bool running_aim_anim;
     }
     void attemptreload()
     {
-        if(magazine> maxammoload)
+        if(magazine < maxammoload)
         {
-            mastersys.reloadsoldiers(magazine, 1);
+       magazine =  mastersys.reloadsoldiers(magazine, 1);
         }
     }
     void tryshoot()
@@ -75,7 +75,7 @@ bool running_aim_anim;
         }
         if(magazine<= 0)
         {
-        magazine =  mastersys.reloadsoldiers(magazine,1);
+        magazine =  mastersys.reloadsoldiers(magazine,5);
         }
     }
     void shoot()
@@ -113,7 +113,7 @@ bool running_aim_anim;
     void Update()
     {
  init();
-        attemptreload();
+      //  attemptreload();
         countdowncooldown();
     }
 }
