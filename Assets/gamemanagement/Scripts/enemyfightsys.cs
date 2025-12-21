@@ -33,14 +33,17 @@ void UpdatePlayerTransform()
               Shootreloadtimereset();
         }
     }
-  public void reloadsoldiers( int magvar,  int withdrawnum)
+  public int reloadsoldiers( int magvar,  int withdrawnum)
     {
     if (withdrawnum < ammopool)
         {
             ammopool -= withdrawnum;
         magvar += withdrawnum;  
         Debug.Log("ENEMY RELOADED"); 
+        return magvar;
+
         }
+        return magvar;
     }
      void Shootreloadtimereset()
     {

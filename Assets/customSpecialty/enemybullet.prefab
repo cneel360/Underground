@@ -96,10 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5507361c42487cd428b647c18d1caef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 48
+  speed: 61
   excepttime: 3
   istimerrunning: 0
   particlesystem: {fileID: 4310025419617860535, guid: 646507b82eb7dbb4884a5faeae476b62, type: 3}
+  DamageNum: 2
 --- !u!1 &8861766672102527253
 GameObject:
   m_ObjectHideFlags: 0

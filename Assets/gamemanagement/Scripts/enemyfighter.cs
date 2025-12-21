@@ -75,7 +75,7 @@ bool running_aim_anim;
         }
         if(magazine<= 0)
         {
-            mastersys.reloadsoldiers(magazine,1);
+        magazine =  mastersys.reloadsoldiers(magazine,1);
         }
     }
     void shoot()
