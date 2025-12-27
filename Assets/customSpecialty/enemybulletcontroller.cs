@@ -10,6 +10,8 @@ public class enemybulletcontroller : MonoBehaviour
    [SerializeField] private  bool istimerrunning;
     public GameObject particlesystem;
     public float DamageNum;
+    public enemyfightsys mastersys;
+      Vector3  aimdir;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,8 +19,10 @@ public class enemybulletcontroller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        mastersys = enemyfightsys.instance;
         istimerrunning = true;
-
+//           aimdir = (mastersys.playerpos - gameObject.transform.position).normalized;
+          //  gameObject.transform.forward = aimdir;
         // speed = 10f;
         rb.linearVelocity = transform.forward * speed;
         
@@ -64,9 +68,12 @@ public class enemybulletcontroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (istimerrunning)
         {
             excepttime -= Time.deltaTime;
+       //       aimdir = (mastersys.playerpos - gameObject.transform.position).normalized;
+         //   gameObject.transform.forward = aimdir;
 
         }
 

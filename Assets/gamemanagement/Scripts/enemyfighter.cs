@@ -26,7 +26,11 @@ bool running_aim_anim;
     }
     public void aim()
     {
+            aimdir = (mastersys.playerpos - spawnbulletpos.position).normalized;
+
          Vector3 directionToPlayer = (mastersys.playerpos - transform.position).normalized;
+           Debug.DrawRay(spawnbulletpos.position, aimdir * 10f, Color.red, 10f);
+           
         gameObject.transform.forward = directionToPlayer;
        //  troopcontroller.transform.forward = mastersys.playerpos;
         gun.transform.forward = directionToPlayer;
@@ -84,6 +88,7 @@ bool running_aim_anim;
         Debug.Log("Enemy Shooting");
           aimdir = (mastersys.playerpos - spawnbulletpos.position).normalized;
             Instantiate(bulletmodel, spawnbulletpos.position, Quaternion.LookRotation(aimdir, Vector3.up));
+          
         Shootreloadtimereset();
     }
     void Shootreloadtimereset()

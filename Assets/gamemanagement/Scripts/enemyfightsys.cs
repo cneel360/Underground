@@ -1,7 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class enemyfightsys : MonoBehaviour
 {
+    public static enemyfightsys instance;
     public GameObject player;
     public Transform playertransform;
     public Vector3 playerpos;
@@ -11,6 +13,10 @@ public class enemyfightsys : MonoBehaviour
      public int maxstockpool;
    public float pooltimout;
 public bool timoutineffect;
+void Awake()
+    {
+        instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
