@@ -4870,6 +4870,7 @@ GameObject:
   - component: {fileID: 1384012057}
   - component: {fileID: 1384012058}
   - component: {fileID: 1384012059}
+  - component: {fileID: 1384012060}
   m_Layer: 0
   m_Name: vietsoldiercontroller
   m_TagString: enemy
@@ -4926,6 +4927,19 @@ MonoBehaviour:
   nav_agent: {fileID: 1070110738}
   anim_control: {fileID: 1925613706}
   activepause: 0
+--- !u!114 &1384012060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384012056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1ed5a10a9842342ae25c3e51801a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Soldier: {fileID: 845656913}
 --- !u!1 &1394447772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,14 +6891,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1384012057}
     m_Modifications:
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: deathcon
+      value: 
+      objectReference: {fileID: 1384012060}
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: maxhealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: protection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: healthbuffer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: mastersys
       value: 
       objectReference: {fileID: 1275477813}
-    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: maxammoload
-      value: 34
-      objectReference: {fileID: 0}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: troopcontroller
       value: 
@@ -6941,25 +6971,9 @@ PrefabInstance:
       propertyPath: 'managedReferences[1939341050335723776].m_Value.Array.data[1]'
       value: 
       objectReference: {fileID: 479797537}
-    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.057
-      objectReference: {fileID: 0}
-    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.277
-      objectReference: {fileID: 0}
-    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.113
-      objectReference: {fileID: 0}
     - target: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: m_Name
       value: veitsoldier
-      objectReference: {fileID: 0}
-    - target: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
-      propertyPath: m_TagString
-      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6779966383968934229, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: player

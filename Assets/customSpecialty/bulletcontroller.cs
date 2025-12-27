@@ -27,7 +27,18 @@ public class bulletcontroller : MonoBehaviour
         // The 'collision' variable contains info about the hit, like the object hit
         Debug.Log("Collided with: " + collision.gameObject.name);
         Instantiate(particlesystem, transform.position, transform.rotation);
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            HitEnemy(collision);
+        }
         Destroy(gameObject);
+
+
+    }
+ void HitEnemy(Collision enemycollision)
+    {
+        enemyhealth enemyhealthsys = enemycollision.gameObject.GetComponent<enemyhealth>();
+        enemyhealthsys.Damage(1);
     }
     // Update is called once per frame
     void Update()
