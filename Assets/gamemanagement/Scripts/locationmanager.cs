@@ -7,8 +7,10 @@ public class locationmanager : MonoBehaviour
     public float timer;
     public bool timeisrunning;
     public string name;
+    public AudioClip locationmusic;
     public string newname;
     public TextMeshProUGUI text;
+    public musicmanager music;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +35,7 @@ public class locationmanager : MonoBehaviour
     {
         displaytimer();
         text.text = name;
+        music.locationmusic = locationmusic;
       
     }
     public void addplace(string placename)
