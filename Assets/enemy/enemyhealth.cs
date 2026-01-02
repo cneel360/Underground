@@ -3,6 +3,7 @@ using UnityEngine;
 public class enemyhealth : MonoBehaviour
 {
     public float health;
+    public GameObject bloodparticlesystem;
     float finaldamage;
     public float protection;
     public float maxhealth;
@@ -17,6 +18,7 @@ public void Damage(float damagenum)
     {
         finaldamage = damagenum - protection;
         health -= finaldamage;
+          Instantiate(bloodparticlesystem, transform.position, transform.rotation);
     }
     // Update is called once per frame
     void Update()

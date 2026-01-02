@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1348122346}
-  locationsong: {fileID: 0}
+  locationsong: {fileID: 8300000, guid: 62d5fa4971763514fba66d0d8b774f2f, type: 3}
   locationname: 'fort winston '
 --- !u!65 &446002423
 BoxCollider:
@@ -7065,6 +7065,10 @@ PrefabInstance:
       propertyPath: healthbuffer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 802511245410641637, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: bloodparticlesystem
+      value: 
+      objectReference: {fileID: 5344048561667190133, guid: c1054c3a529b884489b3ab801eb51180, type: 3}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: mastersys
       value: 
