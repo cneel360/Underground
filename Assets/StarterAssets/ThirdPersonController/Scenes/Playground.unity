@@ -534,6 +534,8 @@ MonoBehaviour:
   inputs: {fileID: 1762682259}
   mousemanager: {fileID: 1348122348}
   dialogeactive: 0
+  talkmusic: {fileID: 8300000, guid: 070834d99cb6bd0478332d9dbc2e4c97, type: 3}
+  mm: {fileID: 958960969}
 --- !u!65 &130999534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3738,6 +3740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationmusic: {fileID: 0}
+  talkmusic: {fileID: 0}
   enemymusic: {fileID: 0}
   standardmusic: {fileID: 8300000, guid: 791b60de0f67f5748913d285cf952c1d, type: 3}
   musicplaying: {fileID: 0}

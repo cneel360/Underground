@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class musicmanager : MonoBehaviour
 {
-    public AudioClip locationmusic;
+    public AudioClip locationmusic; 
+    public AudioClip talkmusic;
     public AudioClip enemymusic;
     public AudioClip standardmusic;
     
@@ -18,7 +19,12 @@ public class musicmanager : MonoBehaviour
     }
 void SelectMusic()
     {
-        if(enemymusic != null)
+         if(talkmusic != null)
+        {
+            musicplaying = talkmusic;
+
+        }
+       else if(enemymusic != null)
         {
             musicplaying = enemymusic;
         } else if(locationmusic != null)
