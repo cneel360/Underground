@@ -32,6 +32,7 @@ public class conversationstarter : MonoBehaviour
     {
      if (dialogeactive)
         {
+            mousemanager.ChangeCursorState(false);
             Debug.Log("MY Conversation started!");
             mm.talkmusic = talkmusic;
         }
@@ -40,7 +41,8 @@ public class conversationstarter : MonoBehaviour
     private void ConversationEnd()
     {
         if (dialogeactive)
-        {
+        {   
+            mousemanager.ChangeCursorState(true);
                Debug.Log("Conversation ended!");
         mm.talkmusic = null;
         // Your code here
@@ -64,7 +66,7 @@ public class conversationstarter : MonoBehaviour
             if (inputs.isDialogActivate)
             {
                 inputs.isDialogActivate = false;
-                mousemanager.ChangeCursorState(false);
+                
                 dialogeactive = true;
                 ConversationManager.Instance.StartConversation(myconvo);
                 
@@ -79,7 +81,7 @@ public class conversationstarter : MonoBehaviour
             if (dialogeactive)
             {
                 dialogeactive = false;
-               mousemanager.ChangeCursorState(true);
+            ;
             }
         }
      
