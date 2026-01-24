@@ -16,6 +16,7 @@ public class enemyfighter : MonoBehaviour
     public float shootcooldowntime;
     public int maxammoload;
     Vector3 aimspot;
+   public float shoottimeout;
     Vector3 aimdir;
 bool running_aim_anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -94,7 +95,7 @@ bool running_aim_anim;
     void Shootreloadtimereset()
     {
         cooldownineffect = true;
-        shootcooldowntime = 2.5f;
+        shootcooldowntime = shoottimeout;
    //  countdowncooldown();   
     }
 

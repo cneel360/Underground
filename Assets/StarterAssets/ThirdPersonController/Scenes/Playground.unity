@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 202767310}
   - component: {fileID: 202767309}
   - component: {fileID: 202767308}
+  - component: {fileID: 202767313}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1035,6 +1036,27 @@ Transform:
   - {fileID: 1693259333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202767313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202767307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2decb4c6600f5044497a64223e454720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    questid: 1
+    queststate: 0
+    title: Get Ammo
+    description: Get Ammo from the Ammo Crate and report back
+    complexity: 1
+    rewarddescription: you get bullets
+    numofsteps: 1
+    step: 0
 --- !u!1 &278057055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6535,7 +6557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 537171133318529478, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.638
+      value: 1.382
       objectReference: {fileID: 0}
     - target: {fileID: 1906264200871691474, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: datamanager
@@ -7077,6 +7099,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1275477813}
     - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: shoottimeout
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570010457764819687, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: troopcontroller
       value: 
       objectReference: {fileID: 1384012056}
@@ -7132,6 +7158,18 @@ PrefabInstance:
       propertyPath: 'managedReferences[1939341050335723776].m_Value.Array.data[1]'
       value: 
       objectReference: {fileID: 479797537}
+    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388718486756547101, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.331
+      objectReference: {fileID: 0}
     - target: {fileID: 6513700914652850821, guid: 7dbd311d9911dd24f9b1cdd475f402c7, type: 3}
       propertyPath: m_Name
       value: veitsoldier
