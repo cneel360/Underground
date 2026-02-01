@@ -1210,7 +1210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2decb4c6600f5044497a64223e454720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
   manager: {fileID: 1348122353}
   quest:
     questid: 0
