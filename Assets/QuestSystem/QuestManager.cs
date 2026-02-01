@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using TMPro;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
   public  List<QuestObject> Questregistry = new List<QuestObject>();
-    
-    
+    public TextMeshProUGUI givequestnameplateUI;
+    public GameObject giveQuestUI;
     public QuestObject GetQuest( int id)
     {
         return Questregistry[id];
@@ -15,6 +16,17 @@ public class QuestManager : MonoBehaviour
     {
         
     }
+      public void flashgivequest(string titleofquest)
+    {
+        giveQuestUI.SetActive(true);
+        givequestnameplateUI.text = titleofquest;
+        Invoke("deactivategivequestui",5f);
+    }
+    void deactivategivequestui()
+    {
+        giveQuestUI.SetActive(false);
+    }
+    
     public QuestObject GetQuestFromRegister(int id)
     {
         QuestObject CurrentQuest;
