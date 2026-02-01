@@ -8,7 +8,7 @@ public class QuestGiver : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        quest = manager.GetQuest(0);
+        quest = manager.GetQuest(qid);
     }
  public void GiveQuest()
     {

@@ -1197,6 +1197,7 @@ MonoBehaviour:
     rewarddescription: you get bullets
     numofsteps: 1
     step: 0
+  qid: 0
 --- !u!114 &202767314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,6 +1211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  manager: {fileID: 1348122353}
   quest:
     questid: 0
     queststate: 0
@@ -1219,6 +1221,7 @@ MonoBehaviour:
     rewarddescription: 
     numofsteps: 0
     step: 0
+  qid: 0
 --- !u!1 &278057055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,6 +5733,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc28feec5fb436489546ae0cfb94d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Questregistry:
+  - questid: 0
+    queststate: 0
+    title: Test mission
+    description: this is a mission for testing
+    complexity: 2
+    rewarddescription: a working game
+    numofsteps: 4
+    step: 0
 --- !u!1 &1384012056
 GameObject:
   m_ObjectHideFlags: 0
