@@ -13,6 +13,7 @@ public class QuestGiver : MonoBehaviour
  public void GiveQuest()
     {
         quest.queststate = 1;
+        manager.triggerquestupdate(qid);
         manager.flashgivequest(quest.title);
     }
     // Update is called once per frame

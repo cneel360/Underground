@@ -21,7 +21,7 @@ public class QuestManager : MonoBehaviour
     }
     public void triggerquestupdate(int internalid)
     {
-        questhasbeenupdated.Invoke(internalid);
+        questhasbeenupdated?.Invoke(internalid);
     }
 
       public void flashgivequest(string titleofquest)

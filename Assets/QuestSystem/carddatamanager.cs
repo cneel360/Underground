@@ -23,7 +23,14 @@ public class carddatamanager : MonoBehaviour
     }
     void OnEnable()
     {
-        manager.questhasbeenupdated += QuestUpdateCheck;
+        if(manager != null)
+        {
+             manager.questhasbeenupdated += QuestUpdateCheck;
+        } else
+        {
+            Debug.Log("manager not delined on card");
+        }
+       
     }
     void OnDisable()
     {
@@ -35,10 +42,11 @@ public class carddatamanager : MonoBehaviour
         questoncard = manager.Questregistry[cardQuestid];
         updatequest();
     }
-    void QuestUpdateCheck(int internalid)
+   public void QuestUpdateCheck(int internalid)
     {
         if(internalid == cardQuestid)
         {
+            Debug.Log(" quest upate check ran! on card");
             updatequest();
         }
     }
