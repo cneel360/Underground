@@ -11,4 +11,5 @@ public class QuestObject
   public string rewarddescription;
   public int numofsteps;
   public int step;
+  public string missionissuer;
 }

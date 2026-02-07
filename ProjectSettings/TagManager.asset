@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - AimSphere
   - enemyweapon
+  - GameManager
   layers:
   - Default
   - TransparentFX
