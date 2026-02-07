@@ -14,6 +14,7 @@ public class carddatamanager : MonoBehaviour
   public TextMeshProUGUI difficulty;
  public TextMeshProUGUI missionissuer;
  public TextMeshProUGUI rewarddiscription;
+ public TextMeshProUGUI statustext;
     // -- end UI elements--
 
     void Awake()
@@ -49,7 +50,27 @@ public class carddatamanager : MonoBehaviour
         description.text = questoncard.description;
         difficulty.text = questoncard.complexity.ToString();
         rewarddiscription.text = questoncard.rewarddescription;
+        statustext.text= StatusTextGenerator(questoncard.queststate);
+    }
+    string StatusTextGenerator(int statecode)
+    {
+        if(statecode == 0)
+        {
+            return "Unissued";
+        }
+         else if( statecode == 1)
+        {
+            return "Active";
+        } else if ( statecode == 2)
+        {
+            return  "Accomplished";
+        }
+        else
+        {
+             return "TOP SECRET- DEVELOPER EYES ONLY- INTERNAL ACCESS REQUIRED";
+        }
 
+       
     }
 
     // Update is called once per frame
