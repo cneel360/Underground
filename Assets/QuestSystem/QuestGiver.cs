@@ -10,11 +10,13 @@ public class QuestGiver : MonoBehaviour
     {
         quest = manager.GetQuest(qid);
     }
- public void GiveQuest()
+ public void GiveQuest(string missionissuer)
     {
         quest.queststate = 1;
+        
         manager.triggerquestupdate(qid);
         manager.flashgivequest(quest.title);
+        quest.missionissuer = missionissuer;
     }
     // Update is called once per frame
     void Update()
