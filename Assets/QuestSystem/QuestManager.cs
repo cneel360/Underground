@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class QuestManager : MonoBehaviour
     public TextMeshProUGUI givequestnameplateUI;
     public GameObject giveQuestUI;
 
-     public event Action<int> questhasbeenupdated;
+     public Action questhasbeenupdated;
     public QuestObject GetQuest( int id)
     {
         return Questregistry[id];
@@ -21,7 +22,7 @@ public class QuestManager : MonoBehaviour
     }
     public void triggerquestupdate(int internalid)
     {
-        questhasbeenupdated?.Invoke(internalid);
+        questhasbeenupdated?.Invoke();
     }
 
       public void flashgivequest(string titleofquest)

@@ -1,5 +1,6 @@
 using UnityEngine;
  using TMPro;
+ using System;
 using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using NUnit.Framework.Internal;
 public class carddatamanager : MonoBehaviour
@@ -21,21 +22,22 @@ public class carddatamanager : MonoBehaviour
     {
         manager =  GameObject.FindGameObjectWithTag("GameManager").GetComponent<QuestManager>();
     }
-    void OnEnable()
+   void OnEnable()
     {
-        if(manager != null)
+     if(manager!= null)
         {
-             manager.questhasbeenupdated += QuestUpdateCheck;
-        } else
-        {
-            Debug.Log("manager not delined on card");
+            manager.questhasbeenupdated += updatequest;
+            Debug.Log("manager subscription questupdated!");
         }
-       
+        
+        updatequest();
     }
     void OnDisable()
     {
-      manager.questhasbeenupdated -= QuestUpdateCheck;  
+manager.questhasbeenupdated -= updatequest;
+         
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -59,6 +61,7 @@ public class carddatamanager : MonoBehaviour
         difficulty.text = questoncard.complexity.ToString();
         rewarddiscription.text = questoncard.rewarddescription;
         statustext.text= StatusTextGenerator(questoncard.queststate);
+        missionissuer.text = questoncard.missionissuer;
     }
     string StatusTextGenerator(int statecode)
     {
