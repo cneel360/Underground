@@ -26,7 +26,7 @@ public class playerhealth : MonoBehaviour
         {
             Debug.Log("Player Died");
             //      gameOvermanager.ActivateGameOver(1);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
     public void Damage(float damagenum)
