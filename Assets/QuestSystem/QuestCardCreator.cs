@@ -1,18 +1,18 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class playgame : MonoBehaviour
+
+public class QuestCardCreator : MonoBehaviour
 {
-    
+    public GameObject cardtemplate;
+    public GameObject currentcard;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.lockState = CursorLockMode.None;
+        
     }
-    public void PlayScene(int playscene)
+ public void CreateCard()
     {
-        SceneManager.LoadScene(playscene);
+        currentcard = Instantiate(cardtemplate,gameObject.transform);
     }
-
     // Update is called once per frame
     void Update()
     {
