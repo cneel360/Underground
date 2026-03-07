@@ -9,9 +9,11 @@ public class QuestCardCreator : MonoBehaviour
     {
         
     }
- public void CreateCard()
+ public void CreateCard(int questid)
     {
         currentcard = Instantiate(cardtemplate,gameObject.transform);
+       carddatamanager newcarddatamanager = currentcard.GetComponent<carddatamanager>();
+       newcarddatamanager.cardQuestid = questid;
     }
     // Update is called once per frame
     void Update()

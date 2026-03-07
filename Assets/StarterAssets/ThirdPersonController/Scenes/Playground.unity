@@ -1287,6 +1287,7 @@ MonoBehaviour:
     numofsteps: 0
     step: 0
     missionissuer: 
+  cardCreator: {fileID: 1072699630}
   qid: 0
 --- !u!1 &213340256
 GameObject:
@@ -1326,6 +1327,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &257017421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4253137340965576487, guid: f57814e946be78348b3f8c053e07cdd5, type: 3}
+  m_PrefabInstance: {fileID: 4685376539538839681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &278057055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +4958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1072699629}
+  - component: {fileID: 1072699630}
   m_Layer: 5
   m_Name: cardholder
   m_TagString: Untagged
@@ -4979,6 +4986,20 @@ RectTransform:
   m_AnchoredPosition: {x: -196, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1072699630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072699628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c9ec8a0e5a4384b9ded4bb35ccdaaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardtemplate: {fileID: 257017421}
+  currentcard: {fileID: 0}
 --- !u!4 &1075142492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 537171133318529478, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
