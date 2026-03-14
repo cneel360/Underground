@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using System;
 
+
 public class QuestManager : MonoBehaviour
 {
   public  List<QuestObject> Questregistry = new List<QuestObject>();
@@ -12,6 +13,7 @@ public class QuestManager : MonoBehaviour
     public GameObject giveQuestUI;
 
      public Action questhasbeenupdated;
+     public Action<int> SwitchQuest;
     public QuestObject GetQuest( int id)
     {
         return Questregistry[id];
@@ -24,7 +26,10 @@ public class QuestManager : MonoBehaviour
     {
         questhasbeenupdated?.Invoke();
     }
-
+public void triggerquestcardswitch(int toswitchto)
+    {
+        SwitchQuest?.Invoke(toswitchto);
+    }
       public void flashgivequest(string titleofquest)
     {
         giveQuestUI.SetActive(true);

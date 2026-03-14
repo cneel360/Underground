@@ -35,6 +35,9 @@ manager.questhasbeenupdated -= updatequest;
     }
     void updatequest()
     {
+            questoncard = manager.GetQuest(cardQuestid);
+              title.text = questoncard.title;
+               statustext.text= StatusTextGenerator(questoncard.queststate);
         
     }
      string StatusTextGenerator(int statecode)

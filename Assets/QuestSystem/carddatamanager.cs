@@ -27,6 +27,7 @@ public class carddatamanager : MonoBehaviour
      if(manager!= null)
         {
             manager.questhasbeenupdated += updatequest;
+            manager.SwitchQuest += switchquest;
             Debug.Log("manager subscription questupdated!");
         }
         
@@ -35,6 +36,7 @@ public class carddatamanager : MonoBehaviour
     void OnDisable()
     {
 manager.questhasbeenupdated -= updatequest;
+manager.SwitchQuest -= switchquest;
          
     }
 
@@ -51,6 +53,11 @@ manager.questhasbeenupdated -= updatequest;
             Debug.Log(" quest upate check ran! on card");
             updatequest();
         }
+    }
+    void switchquest(int newqid)
+    {
+        cardQuestid = newqid;
+        updatequest();
     }
     void updatequest()
     {

@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 875413562059558642}
   - component: {fileID: 8236669770034294435}
   - component: {fileID: 3442096168218874524}
+  - component: {fileID: 3179037109721398792}
   m_Layer: 5
   m_Name: ListedCard
   m_TagString: Untagged
@@ -189,6 +190,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3179037109721398792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410264048670713295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f33a453216a64741b145f80c9f82946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  cardQuestid: 0
+  questoncard:
+    questid: 0
+    queststate: 0
+    title: 
+    description: 
+    complexity: 0
+    rewarddescription: 
+    numofsteps: 0
+    step: 0
+    missionissuer: 
+  title: {fileID: 6916601765827275470}
+  statustext: {fileID: 1802049997012309651}
 --- !u!1 &4605877084102594019
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +378,7 @@ GameObject:
   - component: {fileID: 193470342767302930}
   - component: {fileID: 1802049997012309651}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
