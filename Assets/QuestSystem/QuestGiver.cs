@@ -18,7 +18,7 @@ public class QuestGiver : MonoBehaviour
         manager.triggerquestupdate(qid);
         manager.flashgivequest(quest.title);
         quest.missionissuer = missionissuer;
-        cardCreator.CreateCard(qid);
+      //  cardCreator.CreateCard(qid);
     }
     // Update is called once per frame
     void Update()
