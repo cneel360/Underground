@@ -28,6 +28,11 @@ public class ListedCardDataManager : MonoBehaviour
 manager.questhasbeenupdated -= updatequest;
          
     }
+   public void TriggerDetailAppear()
+    {
+        Debug.Log("Listed Card (Quest) Clicked!");
+        manager.triggerquestcardswitch(cardQuestid);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

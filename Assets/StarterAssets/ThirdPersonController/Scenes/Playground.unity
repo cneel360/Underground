@@ -6248,11 +6248,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 125
-    m_Right: -24
-    m_Top: 13
+    m_Left: 94
+    m_Right: 0
+    m_Top: 10
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_Spacing: 14.8
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -6260,7 +6260,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!114 &1363257442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10594,6 +10594,10 @@ PrefabInstance:
     - target: {fileID: 875413562059558642, guid: c8ef7a1c633d51743b76362ebb1e7130, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179037109721398792, guid: c8ef7a1c633d51743b76362ebb1e7130, type: 3}
+      propertyPath: cardQuestid
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3410264048670713295, guid: c8ef7a1c633d51743b76362ebb1e7130, type: 3}
       propertyPath: m_Name
