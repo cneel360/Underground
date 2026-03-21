@@ -28,7 +28,7 @@ public class UpdateQuest : MonoBehaviour
             }
             if (AdvancestepCount)
             {
-                step += numberofstepstoadvance;
+                currentQuest.step += numberofstepstoadvance;
             }
         }
     }

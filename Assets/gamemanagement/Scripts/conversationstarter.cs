@@ -28,7 +28,7 @@ public class conversationstarter : MonoBehaviour
         ConversationManager.OnConversationEnded -= ConversationEnd;
     }
 
-    private void ConversationStart()
+   public void ConversationStart()
     {
      if (dialogeactive)
         {
@@ -38,7 +38,7 @@ public class conversationstarter : MonoBehaviour
         }
     }
 
-    private void ConversationEnd()
+    public  void ConversationEnd()
     {
         if (dialogeactive)
         {   
