@@ -8,6 +8,11 @@ using System;
 
 public class QuestManager : MonoBehaviour
 {
+
+    //SaveSys
+    public datamanager savesys;
+
+    
   public  List<QuestObject> Questregistry = new List<QuestObject>();
     public TextMeshProUGUI givequestnameplateUI;
     public GameObject giveQuestUI;
@@ -20,7 +25,18 @@ public class QuestManager : MonoBehaviour
     }// Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+         if(savesys.savegameconfig.loadfromsave ==1)
+        {
+           LoadQuestRegistryfromsave();
+        }
+    }
+    void runquestsavesysupdate()
+    {
+        savesys.data.questregistry = Questregistry;
+    }
+    void LoadQuestRegistryfromsave()
+    {
+        Questregistry = savesys.data.questregistry;
     }
     public void triggerquestupdate(int internalid)
     {
@@ -55,6 +71,10 @@ public void triggerquestcardswitch(int toswitchto)
         }
         return CurrentQuest;
         }
+         void Update()
+    {
+        runquestsavesysupdate();
+    }
    
     
     }

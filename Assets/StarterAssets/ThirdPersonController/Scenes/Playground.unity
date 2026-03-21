@@ -6083,6 +6083,7 @@ MonoBehaviour:
     playerprotection: 0
     ammocrateammocount: 
     enemypositions: []
+    questregistry: []
   savegameconfig:
     activesaveslot: 0
     saveslots: 
@@ -6161,6 +6162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc28feec5fb436489546ae0cfb94d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savesys: {fileID: 1348122347}
   Questregistry:
   - questid: 0
     queststate: 0

@@ -2,7 +2,9 @@
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+
 using JetBrains.Annotations;
+using System.Collections.Generic;
 
 public class datamanager : MonoBehaviour
 {
@@ -152,6 +154,9 @@ public int magizine;
 
     // **CORRECTED LINE for enemypositions**
     public Vector3[] enemypositions = new Vector3[25];
+
+    //**QUESTSYSTEM
+    public List<QuestObject> questregistry;
 
 }
 [System.Serializable]
