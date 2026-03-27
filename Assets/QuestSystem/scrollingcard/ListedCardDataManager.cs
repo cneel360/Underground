@@ -19,6 +19,7 @@ public class ListedCardDataManager : MonoBehaviour
         {
             manager.questhasbeenupdated += updatequest;
             Debug.Log("manager subscription questupdated!");
+            updatequest();
         }
         
         updatequest();
@@ -32,6 +33,7 @@ manager.questhasbeenupdated -= updatequest;
     {
         Debug.Log("Listed Card (Quest) Clicked!");
         manager.triggerquestcardswitch(cardQuestid);
+    updatequest();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
