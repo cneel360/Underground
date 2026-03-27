@@ -25,6 +25,7 @@ public class UpdateQuest : MonoBehaviour
             if(function != null)
             {
                 function.Invoke();
+                Debug.Log("UpdateQuest function invoked");
             }
             if (AdvancestepCount)
             {
