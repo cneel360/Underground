@@ -1,11 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class VolumeController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-public void OnSliderChanged(float value)
+public void ChangeVolume(float value)
     {
         Debug.Log("The new value is: " + value);
-        // Add your logic here, e.g., AudioListener.volume = value;
+         AudioListener.volume = value;
     }
 }
