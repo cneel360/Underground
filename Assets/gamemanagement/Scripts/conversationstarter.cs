@@ -9,6 +9,7 @@ public class conversationstarter : MonoBehaviour
     public mousemanager mousemanager;
     public bool dialogeactive;
     public AudioClip talkmusic;
+    public showinteractionindicator interactionindicator;
     public musicmanager mm;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,14 +63,19 @@ public class conversationstarter : MonoBehaviour
         Debug.Log("trigger stay on dialog "+other.tag);
         if (other.CompareTag("Player"))
         {
+          
             Debug.Log("Dialog player tag triggered");
             if (inputs.isDialogActivate)
             {
                 inputs.isDialogActivate = false;
-                
+                interactionindicator.showindicator(false);
                 dialogeactive = true;
                 ConversationManager.Instance.StartConversation(myconvo);
                 
+            }
+           if (!dialogeactive)
+            {
+                  interactionindicator.showindicator(true);
             }
         }
     }
@@ -78,6 +84,7 @@ public class conversationstarter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            interactionindicator.showindicator(false);
             if (dialogeactive)
             {
                 dialogeactive = false;
