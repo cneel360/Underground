@@ -8,6 +8,7 @@ public class playerhealth : MonoBehaviour
     public float protection;
     public float health;
     public float finaldamage;
+    public healthcrate HealthCrate;
 
     //public GameOver gameOvermanager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,6 +41,19 @@ public class playerhealth : MonoBehaviour
         if (health < healthbuffer)
         {
             health += 1;
+        }
+    }
+        void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+       // Debug.Log("something hit by controller");
+        if (hit.gameObject.CompareTag("healthcrate"))
+        {
+          //  Debug.Log("ammocrate hit by controller");
+           HealthCrate = hit.gameObject.GetComponent<healthcrate>();
+            if (HealthCrate!= null)
+            {
+                health = HealthCrate.Heal(health, health, maxhealth);
+            }
         }
     }
         

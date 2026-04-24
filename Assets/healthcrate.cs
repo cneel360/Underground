@@ -2,16 +2,26 @@ using UnityEngine;
 
 public class healthcrate : MonoBehaviour
 {
-    public int healthnum;
+    public float healthnum;
 
 
     void Start()
     {
 
     }
-    public int Heal(int health)
-    {        health += healthnum;
+    public float Heal(float health, float currenthealth, float maxhealth)
+    {        
+        float healthdifferntial=  maxhealth - currenthealth;
+        if(healthnum > healthdifferntial)
+        {
+            health = healthdifferntial;
+            healthnum = healthnum - healthnum;
+        }  else
+        {
+            health += healthnum;
        healthnum = 0;
+        }
+        
         return health;
    }
 

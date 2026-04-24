@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8366523554237156451}
   m_Layer: 0
   m_Name: HealingCrate
-  m_TagString: ammocrate
+  m_TagString: healthcrate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33040cbfc624b5646a0b65a11f17066f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthnum: 0
 --- !u!1 &7941590718823871221
 GameObject:
   m_ObjectHideFlags: 0
