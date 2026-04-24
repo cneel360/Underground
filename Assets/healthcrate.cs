@@ -14,8 +14,8 @@ public class healthcrate : MonoBehaviour
         float healthdifferntial=  maxhealth - currenthealth;
         if(healthnum > healthdifferntial)
         {
-            health = healthdifferntial;
-            healthnum = healthnum - healthnum;
+             health += healthdifferntial;
+            healthnum -= healthdifferntial;
         }  else
         {
             health += healthnum;
