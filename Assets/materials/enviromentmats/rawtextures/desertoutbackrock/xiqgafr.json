@@ -1,0 +1,602 @@
+{
+  "averageColor": "#000000",
+  "categories": [
+    "surface",
+    "rock"
+  ],
+  "comp_version": 1,
+  "description": "",
+  "displacementBias": 0.310934,
+  "displacementCalibrationAccuracy": 0.931347,
+  "displacementScale": 12.847114,
+  "environment": {
+    "biome": "desert biome",
+    "region": "Oceania"
+  },
+  "highest_available_res": 8192,
+  "id": "xiqgafr",
+  "json": {
+    "contentLength": 12652,
+    "uri": "xiqgafr.json"
+  },
+  "maps": [
+    {
+      "averageColor": "#979797",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 183352222,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "AO",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "ao",
+      "uri": "xiqgafr_8K_AO.exr"
+    },
+    {
+      "averageColor": "#979797",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 40693924,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "AO",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "ao",
+      "uri": "xiqgafr_8K_AO.jpg"
+    },
+    {
+      "averageColor": "#935E46",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 231696002,
+      "maxIntensity": 172,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Basecolor",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "xiqgafr_8K_Basecolor.exr"
+    },
+    {
+      "averageColor": "#935E46",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 43987344,
+      "maxIntensity": 172,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Basecolor",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "xiqgafr_8K_Basecolor.jpg"
+    },
+    {
+      "averageColor": "#808080",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 188924901,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Bump",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "bump",
+      "uri": "xiqgafr_8K_Bump.exr"
+    },
+    {
+      "averageColor": "#808080",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 14184996,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Bump",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "bump",
+      "uri": "xiqgafr_8K_Bump.jpg"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 211147378,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "xiqgafr_8K_Cavity.exr"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 52353082,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "xiqgafr_8K_Cavity.jpg"
+    },
+    {
+      "averageColor": "#818181",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 264217430,
+      "maxIntensity": 173,
+      "mimeType": "image/x-exr",
+      "minIntensity": 106,
+      "name": "Displacement",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "displacement",
+      "uri": "xiqgafr_8K_Displacement.exr"
+    },
+    {
+      "averageColor": "#818181",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 5973258,
+      "maxIntensity": 173,
+      "mimeType": "image/jpeg",
+      "minIntensity": 106,
+      "name": "Displacement",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "displacement",
+      "uri": "xiqgafr_8K_Displacement.jpg"
+    },
+    {
+      "averageColor": "#212121",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 157133477,
+      "maxIntensity": 49,
+      "mimeType": "image/x-exr",
+      "minIntensity": 19,
+      "name": "Gloss",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "xiqgafr_8K_Gloss.exr"
+    },
+    {
+      "averageColor": "#212121",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 15112480,
+      "maxIntensity": 49,
+      "mimeType": "image/jpeg",
+      "minIntensity": 19,
+      "name": "Gloss",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "xiqgafr_8K_Gloss.jpg"
+    },
+    {
+      "averageColor": "#8282E5",
+      "bitDepth": 16,
+      "colorSpace": "Linear",
+      "contentLength": 231157014,
+      "maxIntensity": 217,
+      "mimeType": "image/x-exr",
+      "minIntensity": 56,
+      "name": "Normal",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "xiqgafr_8K_Normal.exr"
+    },
+    {
+      "averageColor": "#8282E5",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 97747977,
+      "maxIntensity": 217,
+      "mimeType": "image/jpeg",
+      "minIntensity": 56,
+      "name": "Normal",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "xiqgafr_8K_Normal.jpg"
+    },
+    {
+      "averageColor": "#DEDEDE",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 138775270,
+      "maxIntensity": 236,
+      "mimeType": "image/x-exr",
+      "minIntensity": 206,
+      "name": "Roughness",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "xiqgafr_8K_Roughness.exr"
+    },
+    {
+      "averageColor": "#DEDEDE",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 14060321,
+      "maxIntensity": 236,
+      "mimeType": "image/jpeg",
+      "minIntensity": 206,
+      "name": "Roughness",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "xiqgafr_8K_Roughness.jpg"
+    },
+    {
+      "averageColor": "#383838",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 248495444,
+      "maxIntensity": 56,
+      "mimeType": "image/x-exr",
+      "minIntensity": 56,
+      "name": "Specular",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "xiqgafr_8K_Specular.exr"
+    },
+    {
+      "averageColor": "#383838",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 34481989,
+      "maxIntensity": 56,
+      "mimeType": "image/jpeg",
+      "minIntensity": 56,
+      "name": "Specular",
+      "physicalSize": "2x2",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "xiqgafr_8K_Specular.jpg"
+    }
+  ],
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "2x2 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "0.053 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": true
+    },
+    {
+      "key": "tiling_directions",
+      "name": "Tiling Directions",
+      "value": [
+        "x",
+        "y"
+      ]
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "4096 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "GretagMacbeth ColorChecker Color Rendition Chart"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "MKX"
+    }
+  ],
+  "models": [],
+  "name": "Desert Outback Ground Rocky 06",
+  "pack": {
+    "_id": "canyons-of-utah",
+    "name": "Canyons of Utah"
+  },
+  "physicalSize": null,
+  "points": 2,
+  "previews": {
+    "images": [
+      {
+        "contentLength": 260266,
+        "resolution": "360x360",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "xiqgafr_Grid_360.png"
+      },
+      {
+        "contentLength": 352341,
+        "resolution": "420x420",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "xiqgafr_Grid_420.png"
+      },
+      {
+        "contentLength": 1011640,
+        "resolution": "720x720",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "xiqgafr_Grid_720.png"
+      },
+      {
+        "contentLength": 1367957,
+        "resolution": "840x840",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "xiqgafr_Grid_840.png"
+      },
+      {
+        "contentLength": 3149346,
+        "resolution": "1440x768",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "xiqgafr_PopupClay_1440.png"
+      },
+      {
+        "contentLength": 5874141,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "xiqgafr_PopupClay_1920.png"
+      },
+      {
+        "contentLength": 12461783,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "xiqgafr_PopupClay_2880.png"
+      },
+      {
+        "contentLength": 23390084,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "xiqgafr_PopupClay_3840.png"
+      },
+      {
+        "contentLength": 3515407,
+        "resolution": "1440x768",
+        "tags": [
+          "preview",
+          "tiled"
+        ],
+        "uri": "xiqgafr_PopupTiled_1440.png"
+      },
+      {
+        "contentLength": 6578546,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview",
+          "tiled"
+        ],
+        "uri": "xiqgafr_PopupTiled_1920.png"
+      },
+      {
+        "contentLength": 13995587,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "tiled",
+          "retina"
+        ],
+        "uri": "xiqgafr_PopupTiled_2880.png"
+      },
+      {
+        "contentLength": 25774640,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "tiled",
+          "retina"
+        ],
+        "uri": "xiqgafr_PopupTiled_3840.png"
+      },
+      {
+        "contentLength": 3488288,
+        "resolution": "1440x768",
+        "tags": [
+          "preview"
+        ],
+        "uri": "xiqgafr_Popup_1440.png"
+      },
+      {
+        "contentLength": 6516248,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview"
+        ],
+        "uri": "xiqgafr_Popup_1920.png"
+      },
+      {
+        "contentLength": 13837240,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "xiqgafr_Popup_2880.png"
+      },
+      {
+        "contentLength": 25502414,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "xiqgafr_Popup_3840.png"
+      }
+    ],
+    "relativeSize": "1x1",
+    "scaleReferences": []
+  },
+  "process_date": "2024-04-16 11:08:05",
+  "properties": [],
+  "referencePreviews": {
+    "maps": [],
+    "models": []
+  },
+  "references": [],
+  "revised": false,
+  "revision": 0,
+  "semanticTags": {
+    "asset_type": "surface",
+    "color": [
+      "Red",
+      "Brown",
+      "Gray"
+    ],
+    "contains": [
+      "Rock",
+      "Grit",
+      "Gravel",
+      "sandstone",
+      "pebbles",
+      "stones"
+    ],
+    "country": "Australia",
+    "descriptive": [
+      "Red",
+      "Flat",
+      "Dry",
+      "Old",
+      "Weathered",
+      "Gritty"
+    ],
+    "environment": [
+      "desert biome"
+    ],
+    "locations": {
+      "Oceania": {
+        "Australia": {}
+      }
+    },
+    "maxSize": 2,
+    "minSize": 2,
+    "name": "Desert Outback Ground Rocky 06",
+    "region": "Oceania",
+    "state": [
+      "old"
+    ],
+    "theme": [
+      "Camping",
+      "Mountains",
+      "Trekking",
+      "Wilderness",
+      "canyon",
+      "utah",
+      "Hurrah Pass",
+      "desert",
+      "rock formations",
+      "outdoors",
+      "Ground",
+      "moab"
+    ]
+  },
+  "tags": [
+    "red",
+    "brown",
+    "gray",
+    "camping",
+    "mountains",
+    "trekking",
+    "wilderness",
+    "canyon",
+    "utah",
+    "hurrah pass",
+    "desert",
+    "rock formations",
+    "outdoors",
+    "ground",
+    "moab",
+    "rock",
+    "grit",
+    "gravel",
+    "sandstone",
+    "pebbles",
+    "stones",
+    "flat",
+    "dry",
+    "old",
+    "weathered",
+    "gritty"
+  ],
+  "texelDensity": 4096,
+  "texture_type": "basic",
+  "ue_plugin_archives": [
+    {
+      "contentLength": 308124857,
+      "gltfVersion": "2.0",
+      "tier": 0,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_0/xiqgafr_tier_0.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 96186811,
+      "gltfVersion": "2.0",
+      "tier": 1,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_1/xiqgafr_tier_1.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 24812918,
+      "gltfVersion": "2.0",
+      "tier": 2,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_2/xiqgafr_tier_2.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 2534035,
+      "gltfVersion": "2.0",
+      "tier": 3,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_3/xiqgafr_tier_3.zip",
+      "version": 1
+    }
+  ],
+  "version": 2
+}
