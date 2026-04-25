@@ -1128,6 +1128,7 @@ GameObject:
   - component: {fileID: 211553891008014050}
   - component: {fileID: 1906264200871691474}
   - component: {fileID: 5459532636622584094}
+  - component: {fileID: 6952487076473140637}
   m_Layer: 6
   m_Name: PlayerArmature
   m_TagString: Player
@@ -1300,7 +1301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -1326,9 +1327,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4416926081852918490}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputMove
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1342,9 +1343,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows/leftStick]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4416926081852918490}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputLook
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayLook
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1358,9 +1359,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Look[/Mouse/delta,/XInputControllerWindows/rightStick]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4416926081852918490}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputJump
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1374,9 +1375,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4416926081852918490}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputSprint
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelaySprint
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1389,9 +1390,69 @@ MonoBehaviour:
     m_ActionId: 980e881e-182c-404c-8cbf-3d09fdb48fef
     m_ActionName: 'Player/Sprint[/Keyboard/leftShift,/XInputControllerWindows/leftTrigger]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayAim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 24824915-9117-4be9-8d52-9c315ae12ef3
     m_ActionName: 'Player/Aim[/Mouse/rightButton,/Keyboard/rightCtrl]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d7981181-76b0-4311-a245-b36be114d229
+    m_ActionName: 'Player/Shoot[/Mouse/leftButton,/Keyboard/f]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayPaused
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 73795752-c1b0-4c36-bf96-8e7a984e2674
+    m_ActionName: 'Player/Pause[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6952487076473140637}
+        m_TargetAssemblyTypeName: StarterAssetsInputRelay, Assembly-CSharp
+        m_MethodName: RelayDialogActive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8f7b3f60-c558-4c82-9959-38baece05b7a
+    m_ActionName: 'Player/Dialogstart[/Keyboard/x]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyboardMouse
   m_DefaultActionMap: Player
@@ -1451,6 +1512,7 @@ MonoBehaviour:
   protection: 0
   health: 5
   finaldamage: 0
+  HealthCrate: {fileID: 0}
 --- !u!136 &211553891008014050
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1507,6 +1569,18 @@ MonoBehaviour:
   playercontroller: {fileID: 4416926081852918490}
   playershoot: {fileID: 2926016551242164047}
   activepause: 0
+--- !u!114 &6952487076473140637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c218ad768ccb934e9f2317254528036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1700,7 @@ Transform:
   m_GameObject: {fileID: 4956562736246848290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.561, z: 0}
+  m_LocalPosition: {x: 0, y: 1.382, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
