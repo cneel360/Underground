@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: wildgrass1 terrainlayer
-  m_DiffuseTexture: {fileID: 2800000, guid: 2886ce991f3b0c74ca114d67534e3169, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: b147082d0fdc9f94996cbf7fe5e130fa, type: 3}
+  m_Name: terrainlayergrassandrubble
+  m_DiffuseTexture: {fileID: 2800000, guid: 68a1104d396e04f49a6a70a854d30e72, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 4f4d0f74abf6fde4c91ef84383a2159d, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
   m_TileOffset: {x: 0, y: 0}
