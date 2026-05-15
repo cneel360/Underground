@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2328431944037313053}
   m_Layer: 0
-  m_Name: ammobox
+  m_Name: ammoboxmodel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
