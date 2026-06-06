@@ -3250,7 +3250,7 @@ GameObject:
   - component: {fileID: 1449951220}
   - component: {fileID: 1449951219}
   m_Layer: 0
-  m_Name: Spline
+  m_Name: Queen River
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3276,7 +3276,7 @@ MonoBehaviour:
   m_Sides: 8
   m_SegmentsPerUnit: 4
   m_Capped: 1
-  m_Radius: 10.85
+  m_Radius: 15
   m_Range: {x: 0, y: 1}
   m_FlipNormals: 0
   m_Shape:
@@ -3411,53 +3411,53 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -1.8577675
+        z: -1.8037758
       TangentOut:
         x: 0
         y: 0
-        z: 5.2512164
+        z: 4.8375907
       Rotation:
         value:
-          x: 0.436709
-          y: -0.022202924
-          z: 0.01078236
-          w: 0.89926416
+          x: 0.40980777
+          y: -0.010593989
+          z: 0.015923874
+          w: 0.9119714
     - Position:
         x: 0
-        y: 0
+        y: 5.03
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -8.375924
+        z: -8.05725
       TangentOut:
         x: 0
         y: 0
-        z: 5.3426085
+        z: 5.6236854
       Rotation:
         value:
-          x: 0.28251356
-          y: 0.3979493
-          z: -0.13026617
-          w: 0.8630488
+          x: 0.28362143
+          y: 0.39000666
+          z: -0.13421074
+          w: 0.86570257
     - Position:
         x: 10.71283
-        y: -5.9882927
+        y: -3.07
         z: 5.7566833
       TangentIn:
         x: -0
         y: -0
-        z: -3.3868554
+        z: -3.8087275
       TangentOut:
         x: 0
         y: 0
-        z: 2.1714303
+        z: 2.4989293
       Rotation:
         value:
-          x: 0.104633145
-          y: 0.42724302
-          z: -0.049854927
-          w: 0.8966771
+          x: 0.24237676
+          y: 0.41570902
+          z: -0.11372425
+          w: 0.86919874
     - Position:
         x: 14.389038
         y: -5.988289
@@ -3465,17 +3465,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2.123327
+        z: -2.2711794
       TangentOut:
         x: 0
         y: 0
-        z: 2.9686208
+        z: 2.9886346
       Rotation:
         value:
-          x: 0.00000027096957
-          y: 0.2581525
-          z: -0.00000007240574
-          w: 0.96610415
+          x: 0.11840423
+          y: 0.25048432
+          z: -0.0318439
+          w: 0.96032494
     - Position:
         x: 17.856262
         y: -5.988308
@@ -3627,35 +3627,35 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -5.135371
+        z: -5.4224844
       TangentOut:
         x: 0
         y: 0
-        z: 4.4833045
+        z: 4.5562806
       Rotation:
         value:
-          x: -0.04029545
-          y: -0.28102982
-          z: -0.011811069
-          w: 0.95878
+          x: 0.1361279
+          y: -0.27872202
+          z: 0.038535044
+          w: 0.94989383
     - Position:
         x: 2.8709717
-        y: 19.453817
+        y: 10
         z: 121.62947
       TangentIn:
         x: -0
         y: -0
-        z: -5.0519385
+        z: -5.133408
       TangentOut:
         x: 0
         y: 0
-        z: 8.022642
+        z: 8.171697
       Rotation:
         value:
-          x: -0.01847869
-          y: -0.2781322
-          z: -0.005351705
-          w: 0.96035016
+          x: 0.091617264
+          y: -0.27687326
+          z: 0.025557471
+          w: 0.9561874
     - Position:
         x: -13.205872
         y: 6.437994
@@ -3663,18 +3663,118 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -3.4253552
+        z: -12.449077
       TangentOut:
         x: 0
         y: 0
-        z: 3.4253552
+        z: 18.00289
       Rotation:
         value:
-          x: 0.18684311
-          y: -0.25797984
-          z: 0.050924003
-          w: 0.94654256
+          x: 0.031353235
+          y: -0.20089431
+          z: -0.004220516
+          w: 0.97910196
+    - Position:
+        x: -31.591553
+        y: 6
+        z: 213.02342
+      TangentIn:
+        x: -0
+        y: -0
+        z: -18.070503
+      TangentOut:
+        x: 0
+        y: 0
+        z: 12.829599
+      Rotation:
+        value:
+          x: 0.0052477457
+          y: -0.03738595
+          z: 0.016379047
+          w: 0.9991529
+    - Position:
+        x: -27.229614
+        y: 5.45
+        z: 246.34453
+      TangentIn:
+        x: -0
+        y: -0
+        z: -9.364802
+      TangentOut:
+        x: 0
+        y: 0
+        z: 6.823004
+      Rotation:
+        value:
+          x: 0.0044552074
+          y: 0.12951411
+          z: -0.003201771
+          w: 0.99156237
+    - Position:
+        x: -20.458374
+        y: 5.4
+        z: 262.85065
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1.784108
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.784108
+      Rotation:
+        value:
+          x: 0.0013752376
+          y: 0.19341843
+          z: -0.00026877355
+          w: 0.9811154
+    - Position:
+        x: -20.458374
+        y: 5.4
+        z: 262.85065
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1.055284
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.055284
+      Rotation:
+        value:
+          x: -0.06338907
+          y: 0.07692543
+          z: -0.6437117
+          w: 0.75874865
+    - Position:
+        x: -18.365295
+        y: 5.37
+        z: 273.1938
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1.055284
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.055284
+      Rotation:
+        value:
+          x: -0.066465646
+          y: 0.07428334
+          z: -0.67404205
+          w: 0.731937
     m_MetaData:
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
     - Mode: 0
       Tension: 0.5
     - Mode: 0
@@ -3719,7 +3819,12 @@ MonoBehaviour:
     m_ObjectData:
       m_Data: []
   m_Knots:
-    m_KnotsLink: []
+    m_KnotsLink:
+    - Knots:
+      - Spline: 0
+        Knot: 19
+      - Spline: 0
+        Knot: 20
 --- !u!4 &1449951223
 Transform:
   m_ObjectHideFlags: 0
