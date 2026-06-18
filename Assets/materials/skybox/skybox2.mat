@@ -64,8 +64,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Skymap:
+        m_Texture: {fileID: 8900000, guid: fb53441ae047ffd4ba633c0913b33478, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _skymap:
+        m_Texture: {fileID: 8900000, guid: fb53441ae047ffd4ba633c0913b33478, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -106,6 +114,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Skymap_intensity: 1.58
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -114,14 +123,15 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _groundintensity: 1.18
+    - _groundintensity: 1.21
+    - _skymap_map_power: 0.75
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GroundColor: {r: 0.025453908, g: 0.41509432, b: 0.06441791, a: 0}
-    - _HorizonColor: {r: 0.44134915, g: 0.48532057, b: 0.5471698, a: 0}
-    - _SkyColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
+    - _GroundColor: {r: 0, g: 1, b: 0.09876537, a: 0}
+    - _HorizonColor: {r: 0.27512115, g: 0.16135636, b: 0.9245283, a: 1}
+    - _SkyColor: {r: 0, g: 0.31538486, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
