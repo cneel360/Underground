@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class daycyclemanager : MonoBehaviour
@@ -85,6 +86,14 @@ public class daycyclemanager : MonoBehaviour
         {
             Color currenthorizon = skyhorizoncolorshift.Evaluate(timeofday);
             skyboxMaterial.SetColor("_HorizonColor", currenthorizon); // 2. USE SetColor
+        }
+        if(timeofday > .75 || timeofday < .25)
+        {
+            skyboxMaterial.SetVector("_skycolor_master", new Vector4(0f,0f,0.05f,1f));
+        }
+        else
+        {
+            skyboxMaterial.SetVector("_skycolor_master", new Vector4(1f,1f,1f,1f));
         }
     }
 }
