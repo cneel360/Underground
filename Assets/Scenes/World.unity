@@ -1506,6 +1506,10 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 6
     m_NumAlphaKeys: 2
+  groundcolorday: {r: 0.18480386, g: 0.5660378, b: 0.07742971, a: 0}
+  groundcolornight: {r: 0.16904476, g: 0, b: 0.4433962, a: 0}
+  dayskymap: {fileID: 8900000, guid: fb53441ae047ffd4ba633c0913b33478, type: 3}
+  nightskymap: {fileID: 8900000, guid: 791bef625e9efda45b81a76ed0c0e4ca, type: 3}
 --- !u!1001 &496467219
 PrefabInstance:
   m_ObjectHideFlags: 0

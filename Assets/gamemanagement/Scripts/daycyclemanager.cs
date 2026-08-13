@@ -16,8 +16,11 @@ public class daycyclemanager : MonoBehaviour
     public Material baseskymat;
     public Gradient mainskycolorshift;
     public Gradient skyhorizoncolorshift;
-
+    public Color groundcolorday;
+    public Color groundcolornight;
     private Material skyboxMaterial; // Internal runtime instance
+    public Cubemap dayskymap;
+    public Cubemap nightskymap;
 
     void Start()
     {
@@ -89,11 +92,15 @@ public class daycyclemanager : MonoBehaviour
         }
         if(timeofday > .75 || timeofday < .25)
         {
-            skyboxMaterial.SetVector("_skycolor_master", new Vector4(0f,0f,0.05f,1f));
+         //   skyboxMaterial.SetVector("_skycolor_master", new Vector4(0f,0f,0.05f,1f));
+            skyboxMaterial.SetTexture("_skymap", nightskymap);
+            skyboxMaterial.SetColor("_GroundColor",groundcolornight);
         }
         else
         {
-            skyboxMaterial.SetVector("_skycolor_master", new Vector4(1f,1f,1f,1f));
+        //    skyboxMaterial.SetVector("_skycolor_master", new Vector4(1f,1f,1f,1f));
+             skyboxMaterial.SetTexture("_skymap", dayskymap);
+               skyboxMaterial.SetColor("_GroundColor",groundcolorday);
         }
     }
 }
