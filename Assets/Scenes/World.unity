@@ -478,10 +478,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.5
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -36076,6 +36076,7 @@ SceneRoots:
   - {fileID: 2006633262}
   - {fileID: 1458869960}
   - {fileID: 1647284714}
+  - {fileID: 296089685}
   - {fileID: 460713418}
   - {fileID: 246141976}
   - {fileID: 200797794}
@@ -36096,4 +36097,3 @@ SceneRoots:
   - {fileID: 57068484}
   - {fileID: 2063774524}
   - {fileID: 43134355}
-  - {fileID: 296089685}
