@@ -11,8 +11,11 @@ public class daycyclemanager : MonoBehaviour
     [Header("Time Settings")]
     [Range(0f, 1f)] public float timeofday;
     public float timemultiplier = 0.05f; // Set a small value in Inspector (e.g., 0.01 to 0.05)
-
+  
     [Header("Skybox Settings")]
+    public bool rotateskybox;
+    public float skyRotationSpeed = 1f;
+     public float rotationOffset = 0f;
     public Material baseskymat;
     public Gradient mainskycolorshift;
     public Gradient skyhorizoncolorshift;
@@ -76,7 +79,11 @@ public class daycyclemanager : MonoBehaviour
     void updateskybox()
     {
         if (skyboxMaterial == null) return;
-
+        if (rotateskybox)
+        {
+         float currentRotation = ((timeofday * 360f * skyRotationSpeed) + rotationOffset) % 360f; 
+         skyboxMaterial.SetFloat("_Rotation", currentRotation);  
+        }
         // Evaluate gradients based on timeofday
         if (mainskycolorshift != null)
         {
