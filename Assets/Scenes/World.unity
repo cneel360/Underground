@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 4ed40905293971d4cb81fa7a9a08b31a
+  m_OcclusionCullingData: {fileID: 36300000, guid: b78c4649e2f1b5646b570f14b24e041c, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2539,6 +2539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -2567,10 +2571,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -3687,6 +3703,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -3715,10 +3735,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4073,6 +4105,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2028598214}
+    - target: {fileID: 3897891819869377577, guid: d1ac84a06d6fd1044afe7926fb63cfe4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3959995046371126856, guid: d1ac84a06d6fd1044afe7926fb63cfe4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4165,6 +4201,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 358596526}
+    - target: {fileID: 6657951215497950750, guid: d1ac84a06d6fd1044afe7926fb63cfe4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6938481898000769765, guid: d1ac84a06d6fd1044afe7926fb63cfe4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13557,6 +13597,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -13585,10 +13629,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -14449,6 +14505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -14477,10 +14537,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -15369,6 +15441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -15397,10 +15473,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -15901,6 +15989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -15929,10 +16021,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -16002,6 +16106,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -16030,10 +16138,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -17783,6 +17903,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -17811,10 +17935,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -18316,6 +18452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1674100435904439464, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2378350401496375843, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.79105
@@ -18344,10 +18484,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: barracksbed (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108863290061215816, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5295967936063534513, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d8f8693a4bbe704d867fdfc863d6256, type: 2}
+    - target: {fileID: 6058464115513219586, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919863592963620358, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 7322481898135805472, guid: 3e4dc02693138384c98b31a5fe0864f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
