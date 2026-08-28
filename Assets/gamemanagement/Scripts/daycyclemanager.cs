@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class daycyclemanager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class daycyclemanager : MonoBehaviour
   
     [Header("Skybox Settings")]
     public bool rotateskybox;
+    public bool rotateskyboxrealistic;
     public float skyRotationSpeed = 1f;
      public float rotationOffset = 0f;
     public Material baseskymat;
@@ -58,6 +60,7 @@ public class daycyclemanager : MonoBehaviour
         if (timeofday >= 1f)
         {
             timeofday %= 1f;
+            realisticskyboxrotation();
         }
         else if (timeofday < 0f)
         {
@@ -75,6 +78,7 @@ public class daycyclemanager : MonoBehaviour
         if (suncolorshift != null) sunLight.color = suncolorshift.Evaluate(timeofday);
         if (intensitycurve != null) sunLight.intensity = intensitycurve.Evaluate(timeofday);
     }
+    
 
     void updateskybox()
     {
@@ -109,5 +113,15 @@ public class daycyclemanager : MonoBehaviour
              skyboxMaterial.SetTexture("_skymap", dayskymap);
                skyboxMaterial.SetColor("_GroundColor",groundcolorday);
         }
+    }
+    void realisticskyboxrotation()
+    {
+        if(rotateskyboxrealistic){
+            float randomOffset = Random.Range(0,75);
+            float randomrotatespeed = Random.Range(.75f,2);
+         rotationOffset = randomOffset;
+         skyRotationSpeed =  randomrotatespeed;
+          }
+         
     }
 }

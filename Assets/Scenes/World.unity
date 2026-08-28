@@ -2088,6 +2088,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeofday: 0.25
   timemultiplier: 0.005
+  rotateskybox: 1
+  rotateskyboxrealistic: 1
+  skyRotationSpeed: 1
+  rotationOffset: 0
   baseskymat: {fileID: 2100000, guid: 385c63b47a39fb448bdef993f0f59e1c, type: 2}
   mainskycolorshift:
     serializedVersion: 2
@@ -22643,7 +22647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 125
+    m_Bits: 65
   m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
@@ -22651,13 +22655,13 @@ MonoBehaviour:
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
+  m_MinimumOcclusionTime: 0.2
   m_CameraRadius: 0.3
   m_Strategy: 1
   m_MaximumEffort: 4
-  m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_SmoothingTime: 0.3
+  m_Damping: 0.25
+  m_DampingWhenOccluded: 0.25
   m_OptimalTargetDistance: 0
 --- !u!4 &1315112441920432022
 Transform:
