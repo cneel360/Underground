@@ -17,11 +17,11 @@ public class doorcontroller : MonoBehaviour
 
     [Range(0,1)]
      public float target;
-     float internalpos;
-      float internaltargetpos;
-      float targetdistance;
-      float targetdistanceabsolute;
-         float calculatedmovetime;
+   public  float internalpos;
+     public float internaltargetpos;
+     public  float targetdistance;
+    public  float targetdistanceabsolute;
+     public    float calculatedmovetime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,7 +33,7 @@ public class doorcontroller : MonoBehaviour
          internalpos= Mathf.Lerp(closedposition, openposition, basedoorposition);
         internaltargetpos = Mathf.Lerp(closedposition, openposition, target);
          targetdistance = basedoorposition - target;
-         targetdistanceabsolute = Mathf.Clamp(targetdistance,0,1);
+         targetdistanceabsolute = Mathf.Clamp(Mathf.Abs(targetdistance),0,1);
          calculatedmovetime = doormovetime * targetdistanceabsolute;
     }
      void movedoor()
@@ -43,11 +43,15 @@ public class doorcontroller : MonoBehaviour
            float newangle = Mathf.LerpAngle(doorobject.rotation.y,internaltargetpos,calculatedmovetime * Time.deltaTime );
            doorobject.eulerAngles = new Vector3(doorobject.eulerAngles.x, newangle, doorobject.eulerAngles.z);
         }
+        else
+        {
+            basedoorposition = target;
+        }
     }
     // Update is called once per frame
     void Update()
     {
         movedoorcalcs();
-
+        movedoor();
     }
 }
