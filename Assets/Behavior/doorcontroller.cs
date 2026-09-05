@@ -40,13 +40,15 @@ public class doorcontroller : MonoBehaviour
     {
         if(basedoorposition != target)
         {
-           float newangle = Mathf.LerpAngle(doorobject.rotation.y,internaltargetpos,calculatedmovetime * Time.deltaTime );
+                    float step = Time.deltaTime / Mathf.Max(doormovetime, 0.0001f);
+        basedoorposition = Mathf.MoveTowards(basedoorposition, target, step);
+        basedoorposition = Mathf.Clamp01(basedoorposition); // safety, since [Range] doesn't enforce at runtime
+             float currentAngle = doorobject.eulerAngles.y;
+           float newangle = Mathf.LerpAngle(currentAngle,internaltargetpos,calculatedmovetime * Time.deltaTime );
            doorobject.eulerAngles = new Vector3(doorobject.eulerAngles.x, newangle, doorobject.eulerAngles.z);
+           
         }
-        else
-        {
-            basedoorposition = target;
-        }
+        
     }
     // Update is called once per frame
     void Update()
