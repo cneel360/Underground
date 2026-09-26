@@ -92,7 +92,7 @@ public class daycyclemanager : MonoBehaviour
         if (mainskycolorshift != null)
         {
             Color currentsky = mainskycolorshift.Evaluate(timeofday);
-            Debug.Log($"Time: {timeofday} | Updating SkyColor to: {currentsky}");
+          //  Debug.Log($"Time: {timeofday} | Updating SkyColor to: {currentsky}");
             skyboxMaterial.SetColor("_SkyColor", currentsky); // 2. USE SetColor
         }
 
