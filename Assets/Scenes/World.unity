@@ -3882,7 +3882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 1271321990}
-  grassBladeMesh: {fileID: 4300000, guid: 6e43aeecbd2406b4c9a28aeeb38e2543, type: 2}
+  grassBladeMesh: {fileID: -4641848694147303391, guid: bb79f8a8842d3cf41bf53d812e1bb088, type: 3}
   grassMaterial: {fileID: 2100000, guid: 9996c68a38c374a4a879bf7e0329303c, type: 2}
   instanceCount: 50000
   maxDistance: 100

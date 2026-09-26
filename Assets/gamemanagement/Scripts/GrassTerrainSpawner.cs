@@ -78,7 +78,7 @@ public class GrassTerrainSpawner : MonoBehaviour
         Debug.Log($"Found {validPositions.Count} valid grass positions on layer {targetLayerIndex}.");
         positionBuffer = new ComputeBuffer(validPositions.Count, sizeof(float) * 3);
         positionBuffer.SetData(validPositions.ToArray());
-
+            grassMaterial.SetFloat("_MaxDistance", maxDistance);
         grassMaterial.SetBuffer("_Positions", positionBuffer);
 
         renderParams = new RenderParams(grassMaterial)
