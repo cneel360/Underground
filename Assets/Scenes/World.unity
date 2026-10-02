@@ -3847,6 +3847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666085037}
   - component: {fileID: 666085038}
+  - component: {fileID: 666085039}
   m_Layer: 0
   m_Name: Grassmanager
   m_TagString: Untagged
@@ -3885,10 +3886,29 @@ MonoBehaviour:
   grassBladeMesh: {fileID: -4641848694147303391, guid: bb79f8a8842d3cf41bf53d812e1bb088, type: 3}
   grassMaterial: {fileID: 2100000, guid: 9996c68a38c374a4a879bf7e0329303c, type: 2}
   instanceCount: 50000
-  maxDistance: 100
+  maxDistance: 10
   bladeScale: {x: 0.5, y: 1.5}
   targetLayerIndex: 0
   densityThreshold: 1
+--- !u!114 &666085039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666085036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416f92d43b33ed345a0ce67b01aa21a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassComputeShader: {fileID: 7200000, guid: 592609b0a72320e4c8c356edc365504d, type: 3}
+  terrain: {fileID: 1271321990}
+  grassMesh: {fileID: -4641848694147303391, guid: bb79f8a8842d3cf41bf53d812e1bb088, type: 3}
+  grassMaterial: {fileID: 2100000, guid: 9996c68a38c374a4a879bf7e0329303c, type: 2}
+  instanceCount: 50000
+  maxDistance: 100
+  targetLayerIndex: 0
 --- !u!1 &670268849
 GameObject:
   m_ObjectHideFlags: 0

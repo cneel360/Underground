@@ -1,0 +1,54 @@
+#pragma kernel CSMain
+
+struct GrassInstance { float3 position; };
+
+AppendStructuredBuffer<GrassInstance> _VisibleInstancesBuffer;
+
+Texture2D<float4> _HeightMap;
+SamplerState sampler_HeightMap;
+Texture2D<float4> _SplatMap;
+SamplerState sampler_SplatMap;
+
+float4x4 _VPMatrix;
+float3 _CameraPosition;
+float _MaxDistance;
+float3 _TerrainSize;
+float3 _TerrainPos;
+uint _InstanceCount;
+int _TargetLayerIndex;
+
+uint pcg(uint v)
+{
+    uint s = v * 747796405u + 2891336453u;
+    uint w = ((s >> ((s >> 28u) + 4u)) ^ s) * 277803737u;
+    return (w >> 22u) ^ w;
+}
+float rand(uint seed) { return pcg(seed) / 4294967295.0; }
+
+[numthreads(64, 1, 1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _InstanceCount) return;
+
+    float2 uv = float2(rand(id.x * 2u), rand(id.x * 2u + 1u));
+
+    float4 splat = _SplatMap.SampleLevel(sampler_SplatMap, uv, 0);
+    if (splat[_TargetLayerIndex & 3] < 0.3) return;
+
+    float h = _HeightMap.SampleLevel(sampler_HeightMap, uv, 0).r * _TerrainSize.y * 2.0;
+
+    float3 worldPos = float3(
+        _TerrainPos.x + uv.x * _TerrainSize.x,
+        _TerrainPos.y + h,
+        _TerrainPos.z + uv.y * _TerrainSize.z);
+
+    if (distance(worldPos, _CameraPosition) > _MaxDistance) return;
+
+    float4 clip = mul(_VPMatrix, float4(worldPos, 1.0));
+    float m = clip.w * 1.1;
+    if (clip.w <= 0 || abs(clip.x) > m || abs(clip.y) > m) return;
+
+    GrassInstance inst;
+    inst.position = worldPos;
+    _VisibleInstancesBuffer.Append(inst);
+}
