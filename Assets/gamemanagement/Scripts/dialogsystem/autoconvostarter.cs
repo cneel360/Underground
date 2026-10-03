@@ -2,6 +2,7 @@ using UnityEngine;
 using DialogueEditor;
 using StarterAssets;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 public class autoconvostarter : MonoBehaviour
 {
    // public UpdateQuest target0;
@@ -11,6 +12,8 @@ public class autoconvostarter : MonoBehaviour
     public bool dialogeactive;
     public AudioClip talkmusic;
     public musicmanager mm;
+      public bool lockcontrol;
+    public PlayerInput thirdPersonController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created void Start()
      void Start()
     {
@@ -35,6 +38,8 @@ public class autoconvostarter : MonoBehaviour
      if (dialogeactive)
         {
             mousemanager.ChangeCursorState(false);
+            if(lockcontrol){ thirdPersonController.enabled = false;}
+           
             Debug.Log("MY Conversation started!");
             mm.talkmusic = talkmusic;
         }
@@ -45,6 +50,7 @@ public class autoconvostarter : MonoBehaviour
         if (dialogeactive)
         {   
             mousemanager.ChangeCursorState(true);
+            thirdPersonController.enabled = true;
                Debug.Log("Conversation ended!");
         mm.talkmusic = null;
         // Your code here
