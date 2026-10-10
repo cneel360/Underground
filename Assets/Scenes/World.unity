@@ -154,9 +154,9 @@ MonoBehaviour:
   doorobject: {fileID: 20876468}
   closedposition: 0
   openposition: -35
-  doormovetime: 0
+  doormovetime: 5
   basedoorposition: 0
-  target: 1
+  target: 0
   internalpos: 0
   internaltargetpos: 0
   targetdistance: 0
