@@ -22753,7 +22753,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1943748323}
+        m_TargetAssemblyTypeName: QuestGiver, Assembly-CSharp
+        m_MethodName: GiveQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Captain Blackwell
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 11
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -25111,6 +25123,7 @@ GameObject:
   - component: {fileID: 1943748319}
   - component: {fileID: 1943748318}
   - component: {fileID: 1943748317}
+  - component: {fileID: 1943748323}
   m_Layer: 0
   m_Name: captblackwellconvosys
   m_TagString: Untagged
@@ -25179,27 +25192,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 14
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":11,"yPos":429},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"where
-    am I","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":328,"yPos":406},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"what
-    is happening","parentUIDs":[1,3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":273,"yPos":802},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Sir,
-    we if we are totally outnumbered, how will we win","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":496,"yPos":826},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"understood
-    Sir. where do you need me","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":198,"yPos":122},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
-    its ''bout time ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":177,"yPos":265},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"you
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-8,"yPos":-33},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"where
+    am I","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":309,"yPos":-56},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"what
+    is happening","parentUIDs":[1,3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":254,"yPos":340},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Sir,
+    we if we are totally outnumbered, how will we win","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":477,"yPos":364},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"understood
+    Sir. where do you need me","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":179,"yPos":-340},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
+    its ''bout time ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":158,"yPos":-197},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"you
     were sure smacked up ","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":19,"yPos":555},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":0,"yPos":93},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"
     fort kingfisher","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":333,"yPos":571},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":314,"yPos":109},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     long and short of it is every man is expected to do his duty","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":329,"yPos":711},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"the
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":312,"yPos":250},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"the
     plan is to hold out as long as possaible","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":326,"yPos":485},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"we
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":307,"yPos":23},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"we
     are surrounded, outmanned, outgunned, but not out fought","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":506,"yPos":899},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":487,"yPos":437},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     enemy is preparing to attack. There are 4 artillery guns that will be nessasarry
     to defend until we can slip into the resistance","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":270,"yPos":893},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Those
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":251,"yPos":431},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Those
     Cowards ... They are many in numbers, but few in men","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":271,"yPos":997},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":252,"yPos":535},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"
     they want this stronghold ...   they will  have to come and take it","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
     Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -25224,7 +25237,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1943748323}
+        m_TargetAssemblyTypeName: QuestGiver, Assembly-CSharp
+        m_MethodName: GiveQuest
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Captain Blackwell
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1943748320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25299,6 +25324,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943748315}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1943748323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943748315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2decb4c6600f5044497a64223e454720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 7678738742518443631}
+  quest:
+    questid: 0
+    queststate: 0
+    title: 'Activate the Artillary '
+    description: 'you must activate the Artillary emplacements around Fort KingfisherKingfisher '
+    complexity: 0
+    rewarddescription: 
+    numofsteps: 6
+    step: 0
+    missionissuer: Capt. Blackwell
+  cardCreator: {fileID: 111584514096241371}
+  qid: 2
 --- !u!43 &1947205518
 Mesh:
   m_ObjectHideFlags: 32
@@ -41206,6 +41256,15 @@ MonoBehaviour:
     complexity: 2
     rewarddescription: 10 Gold
     numofsteps: 4
+    step: 0
+    missionissuer: 
+  - questid: 2
+    queststate: 0
+    title: Fire up the Artillary
+    description: Activate the gun battaries  around Kingfisher
+    complexity: 2
+    rewarddescription: Survival.
+    numofsteps: 6
     step: 0
     missionissuer: 
   givequestnameplateUI: {fileID: 923530921521606498}
