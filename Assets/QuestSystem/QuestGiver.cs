@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class QuestGiver : MonoBehaviour
+public class  QuestGiver: MonoBehaviour
 {
  public QuestManager manager;
  public QuestObject quest;
