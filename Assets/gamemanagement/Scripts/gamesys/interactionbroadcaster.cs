@@ -13,6 +13,7 @@ public class interactionbroadcaster : MonoBehaviour
     }
      public void InputPressed(InputAction.CallbackContext  context)
     {
+        Debug.Log("invoking Interact messaage.");
         interacttrying?.Invoke();
     }
     // Update is called once per frame

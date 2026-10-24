@@ -8,10 +8,12 @@ public class AAIntroQuestRunner : MonoBehaviour
     public int qid;
     public QuestManager questmanager;
     public bool isInBounds;
+    public bool HasBeenActivated;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         questobj = questmanager.GetQuest(qid);
+        HasBeenActivated = false;
     }
     void OnEnable()
     {
@@ -33,10 +35,13 @@ public class AAIntroQuestRunner : MonoBehaviour
     }
     void AA_Activate()
     {
-        if (isInBounds)
+        Debug.Log("AA Activation Func Active");
+        if (isInBounds && !HasBeenActivated)
         {
+
             questobj.step +=1;
-            
+            HasBeenActivated = true;
+            Debug.Log("should have activated this AA");
         }
     }
     // Update is called once per frame
