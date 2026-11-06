@@ -16,7 +16,8 @@ public class QuestManager : MonoBehaviour
   public  List<QuestObject> Questregistry = new List<QuestObject>();
     public TextMeshProUGUI givequestnameplateUI;
     public GameObject giveQuestUI;
-
+    public GameObject updateQuestUI;
+    public TextMeshProUGUI updatequestnameplateui;
      public Action questhasbeenupdated;
      public Action<int> SwitchQuest;
     public QuestObject GetQuest( int id)
@@ -51,6 +52,16 @@ public void triggerquestcardswitch(int toswitchto)
         giveQuestUI.SetActive(true);
         givequestnameplateUI.text = titleofquest;
         Invoke("deactivategivequestui",5f);
+    }
+        public void flashupdatequest(string msg)
+    {
+        giveQuestUI.SetActive(true);
+        givequestnameplateUI.text = msg;
+        Invoke("deactivateupdatequestui",5f);
+    }
+        void deactivateupdatequestui()
+    {
+        giveQuestUI.SetActive(false);
     }
     void deactivategivequestui()
     {

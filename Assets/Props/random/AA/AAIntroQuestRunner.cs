@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class AAIntroQuestRunner : MonoBehaviour
@@ -8,6 +9,7 @@ public class AAIntroQuestRunner : MonoBehaviour
     public int qid;
     public QuestManager questmanager;
     public bool isInBounds;
+    public bool questisactive;
     public bool HasBeenActivated;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,8 +37,16 @@ public class AAIntroQuestRunner : MonoBehaviour
     }
     void AA_Activate()
     {
+        if(questobj.queststate == 1)
+        {
+            questisactive = true;
+        }
+        else
+        {
+            questisactive = false;
+        }
         Debug.Log("AA Activation Func Active");
-        if (isInBounds && !HasBeenActivated)
+        if (isInBounds && !HasBeenActivated && questisactive)
         {
 
             questobj.step +=1;
