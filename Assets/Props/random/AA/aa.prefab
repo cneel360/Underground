@@ -115,6 +115,9 @@ MonoBehaviour:
   qid: 0
   questmanager: {fileID: 0}
   isInBounds: 0
+  questisactive: 0
+  HasBeenActivated: 0
+  updateMessage: AA has been Activated
 --- !u!65 &9156362705568607435
 BoxCollider:
   m_ObjectHideFlags: 0

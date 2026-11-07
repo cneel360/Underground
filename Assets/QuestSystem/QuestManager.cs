@@ -55,13 +55,13 @@ public void triggerquestcardswitch(int toswitchto)
     }
         public void flashupdatequest(string msg)
     {
-        giveQuestUI.SetActive(true);
-        givequestnameplateUI.text = msg;
-        Invoke("deactivateupdatequestui",5f);
+        updateQuestUI.SetActive(true);
+        updatequestnameplateui.text = msg;
+        Invoke(nameof(deactivateupdatequestui),5f);
     }
         void deactivateupdatequestui()
     {
-        giveQuestUI.SetActive(false);
+        updateQuestUI.SetActive(false);
     }
     void deactivategivequestui()
     {

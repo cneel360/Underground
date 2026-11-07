@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using UnityEditor;
 using UnityEngine;
 
 public class AAIntroQuestRunner : MonoBehaviour
@@ -11,6 +12,7 @@ public class AAIntroQuestRunner : MonoBehaviour
     public bool isInBounds;
     public bool questisactive;
     public bool HasBeenActivated;
+    public  string updateMessage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,6 +54,7 @@ public class AAIntroQuestRunner : MonoBehaviour
             questobj.step +=1;
             HasBeenActivated = true;
             Debug.Log("should have activated this AA");
+            questmanager.flashupdatequest(updateMessage);
         }
     }
     // Update is called once per frame
