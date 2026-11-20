@@ -27,6 +27,10 @@ public class doorcontroller : MonoBehaviour
     {
         
     }
+    public void SetTarget(float ntarget)
+    {
+      target = ntarget;  
+    }
    void movedoorcalcs()
     {
         

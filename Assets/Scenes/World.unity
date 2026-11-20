@@ -23263,6 +23263,30 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 246507792}
+        m_TargetAssemblyTypeName: doorcontroller, Assembly-CSharp
+        m_MethodName: SetTarget
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 20876464}
+        m_TargetAssemblyTypeName: doorcontroller, Assembly-CSharp
+        m_MethodName: SetTarget
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1943748323}
         m_TargetAssemblyTypeName: QuestGiver, Assembly-CSharp
         m_MethodName: GiveQuest
@@ -23272,7 +23296,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Captain Blackwell
+          m_StringArgument: Capt Blackwell
           m_BoolArgument: 0
         m_CallState: 2
   NodeID: 11
@@ -25866,27 +25890,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 14
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-8,"yPos":-33},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"where
-    am I","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":309,"yPos":-56},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"what
-    is happening","parentUIDs":[1,3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":254,"yPos":340},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Sir,
-    we if we are totally outnumbered, how will we win","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":477,"yPos":364},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"understood
-    Sir. where do you need me","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":179,"yPos":-340},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
-    its ''bout time ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":158,"yPos":-197},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"you
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":146,"yPos":-49},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"where
+    am I","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":463,"yPos":-72},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"what
+    is happening","parentUIDs":[1,3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":408,"yPos":324},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Sir,
+    we if we are totally outnumbered, how will we win","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":631,"yPos":348},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"understood
+    Sir. where do you need me","parentUIDs":[6,13],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":333,"yPos":-356},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Well
+    its ''bout time ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":null,"OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":312,"yPos":-213},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"you
     were sure smacked up ","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":0,"yPos":93},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":154,"yPos":77},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"
     fort kingfisher","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":314,"yPos":109},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":468,"yPos":93},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     long and short of it is every man is expected to do his duty","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":312,"yPos":250},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"the
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":470,"yPos":219},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"the
     plan is to hold out as long as possaible","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":307,"yPos":23},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"we
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":461,"yPos":7},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"we
     are surrounded, outmanned, outgunned, but not out fought","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":487,"yPos":437},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":641,"yPos":420},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"The
     enemy is preparing to attack. There are 4 artillery guns that will be nessasarry
     to defend until we can slip into the resistance","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":251,"yPos":431},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Those
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":405,"yPos":415},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Those
     Cowards ... They are many in numbers, but few in men","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
-    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":252,"yPos":535},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"
+    Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":405,"yPos":521},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"
     they want this stronghold ...   they will  have to come and take it","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Captain
     Blackwell","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -25912,6 +25936,30 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 246507792}
+        m_TargetAssemblyTypeName: doorcontroller, Assembly-CSharp
+        m_MethodName: SetTarget
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 20876464}
+        m_TargetAssemblyTypeName: doorcontroller, Assembly-CSharp
+        m_MethodName: SetTarget
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1943748323}
         m_TargetAssemblyTypeName: QuestGiver, Assembly-CSharp
         m_MethodName: GiveQuest
@@ -25921,7 +25969,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Captain Blackwell
+          m_StringArgument: Capt Blackwell
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1943748320
